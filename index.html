@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <link rel="stylesheet" href="/dist/output.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>site</title>
+</head>
+<body class="h-screen w-full font-inter">
+<div class="main-wrapper flex h-screen w-full text-primary">
+
+  <!--  Sidebar-->
+
+  <div class="sidebar w-[220px] bg-[#f7f7f8] border border-borderLightGrey border-r-1 p-[10px] text-sm text-secondary h-screen">
+    <nav class="h-[100%] flex flex-col">
+      <div class="flex items-center px-2 cursor-pointer w-full rounded-md  hover:bg-[#eaeaea] group">
+        <span
+            class="block w-5 h-5 flex items-center justify-center bg-[#def1e7] text-[11px] rounded-[4px] mr-2 text-green-500 py-[6px]">M</span>
+        <span class="font-medium text-primary">My Workspace</span>
+
+        <div class="ml-auto group-hover:border-l-[1px] group-hover:border-borderLightGrey">
+          <button class="pl-2 py-[6px] opacity-0 group-hover:opacity-100">
+            <!--            <img  src="icons/collapse.svg" alt="collapse"-->
+
+            <svg class=" fill-primary opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor"
+                 stroke-width="0" viewBox="0 0 16 16" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4 13.5h.5v-11H4A1.5 1.5 0 002.5 4v8A1.5 1.5 0 004 13.5zm1.5-11v11H12a1.5 1.5 0 001.5-1.5V4A1.5 1.5 0 0012 2.5H5.5zM12 15H4a3 3 0 01-3-3V4a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3zM10.214 4.985a.617.617 0 01.839.904L8.826 7.954l2.236 2.166a.617.617 0 11-.858.886L7.5 8.386a.617.617 0 01.01-.894l2.703-2.507z"
+                    fill="var(--fill)"></path>
+            </svg>
+
+            <!--                 class="h-6 w-6 fill-primary opacity-0 group-hover:opacity-100">-->
+          </button>
+        </div>
+
+      </div>
+      <ul class="flex flex-col flex-1">
+        <li class="sidebar-item my-3 border border-borderLightGrey rounded-lg">
+          <div class="w-5 mx-[5px]">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em"
+                 width="1em"
+                 xmlns="http://www.w3.org/2000/svg">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.563 4.008a3.625 3.625 0 11-5.126 5.126 3.625 3.625 0 015.126-5.126zm1.135 6.111a5.125 5.125 0 10-1.315.99.815.815 0 00.042.049l3.008 3.225a.82.82 0 101.199-1.118l-2.934-3.146z"
+                      fill="var(--fill)"></path>
+              </svg>
+
+            </svg>
+          </div>
+          <span>Search</span>
+        </li>
+
+        <li class="sidebar-item ">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-[16px] h-[16px]" fill="currentColor" stroke="currentColor" stroke-width="0"
+                 viewBox="0 0 20 20"
+                 aria-hidden="true" height="1em"
+                 width="1em" xmlns="http://www.w3.org/2000/svg">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3.5 10a1 1 0 01-1-1V4A1.5 1.5 0 014 2.5h8A1.5 1.5 0 0113.5 4v5a1 1 0 01-1 1h-2a2.5 2.5 0 01-5 0h-2zm8.5 5H4a3 3 0 01-3-3V4a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3z"
+                      fill="var(--fill)"></path>
+              </svg>
+            </svg>
+
+          </div>
+          <span>Inbox</span>
+
+        </li>
+        <li class="item-active">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-[16px] h-[16px]" fill="currentColor" stroke="currentColor" stroke-width="0"
+                 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 13.75C11.1756 13.75 13.75 11.1756 13.75 8C13.75 4.82436 11.1756 2.25 8 2.25C4.82436 2.25 2.25 4.82436 2.25 8C2.25 11.1756 4.82436 13.75 8 13.75ZM8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 10.75C9.51878 10.75 10.75 9.51878 10.75 8C10.75 6.48122 9.51878 5.25 8 5.25C6.48122 5.25 5.25 6.48122 5.25 8C5.25 9.51878 6.48122 10.75 8 10.75ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM8 9C8.55228 9 9 8.55228 9 8C9 7.44772 8.55228 7 8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9Z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <span>Assigned to me</span>
+        </li>
+
+        <li class="sidebar-item">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-[16px] h-[16px]" stroke="currentColor" fill="currentColor" stroke-width="0"
+                 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.2694 8.8378C10.9641 8.59197 10.6718 8.39539 10.4448 8.25461C10.7439 7.96256 10.991 7.61735 11.1706 7.23426C11.3819 6.78365 11.5 6.28062 11.5 5.75C11.5 3.817 9.933 2.25 8 2.25C6.067 2.25 4.5 3.817 4.5 5.75C4.5 6.27323 4.61481 6.76965 4.82062 7.21543C4.9983 7.60028 5.24381 7.94739 5.5418 8.24144C5.26087 8.4042 4.88361 8.64778 4.50586 8.96769C3.75391 9.6045 3 10.5437 3 11.75C3 12.8546 3.89543 13.75 5 13.75H7.00059C6.98692 13.3391 7.21181 12.8954 7.53713 12.5701L7.60721 12.5H5C4.58579 12.5 4.25 12.1642 4.25 11.75C4.25 11.2577 4.47796 10.7874 4.88524 10.3346C5.29415 9.87991 5.80684 9.53252 6.16844 9.32302C6.50567 9.12764 6.73247 8.78614 6.78176 8.39952C6.83105 8.0129 6.69719 7.62542 6.41977 7.35168C6.00486 6.94227 5.75 6.37704 5.75 5.75C5.75 4.50736 6.75736 3.5 8 3.5C9.24264 3.5 10.25 4.50736 10.25 5.75C10.25 6.38135 9.99161 6.95011 9.57158 7.36017C9.29658 7.62864 9.16037 8.00868 9.20221 8.39071C9.24406 8.77274 9.45931 9.11429 9.7859 9.31686C9.95757 9.42334 10.1645 9.56205 10.3794 9.72783L11.2694 8.8378Z"
+                    fill="var(--fill)"></path>
+              <rect fill="none" x="9" y="11" width="4" height="4" rx="1" stroke="var(--fill)"
+                    stroke-width="1.25"></rect>
+            </svg>
+          </div>
+          <span>Created by me</span>
+        </li>
+
+        <li class="sidebar-item">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.667 8a2 2 0 011.666-1.972V5a3.667 3.667 0 017.334 0v1.028A2 2 0 0113.333 8v4a2 2 0 01-2 2H4.667a2 2 0 01-2-2V8zm7.666-3v1H5.667V5a2.333 2.333 0 014.666 0zm-5 2.333C4.597 7.333 4 7.93 4 8.667v2.666c0 .737.597 1.334 1.333 1.334h5.334c.736 0 1.333-.597 1.333-1.334V8.667c0-.737-.597-1.334-1.333-1.334H5.333z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <span>Private tasks</span>
+        </li>
+
+        <li class="cursor-pointer w-full mt-4">
+          <div class="flex items-center ml-2 mb-2 sidebar-dropdown">
+            <div class="w-5 mx-[5px]">
+
+              <svg class="w-4 h-4 dropdown-arrow" stroke="currentColor" fill="currentColor" stroke-width="0"
+                   viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12.2903 5.92483C12.5557 6.17093 12.5713 6.58558 12.3252 6.85096L8.56475 10.9058C8.44243 11.0377 8.27128 11.1136 8.0914 11.1155C7.91153 11.1175 7.73876 11.0454 7.61359 10.9163L3.68469 6.86136C3.43284 6.60143 3.43938 6.18655 3.69931 5.93469C3.82684 5.81113 3.99166 5.74976 4.15623 5.75H11.8428C12.0029 5.74951 12.1636 5.80735 12.2903 5.92483Z"
+                    fill="var(--fill)"></path>
+              </svg>
+
+            </div>
+            <span class="text-primary font-medium ">Recently opened</span>
+          </div>
+
+          <ul class="sidebar-collapsable">
+            <li class="sidebar-item">
+              <div class="w-5 mx-[5px]">
+                <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px]"></div>
+              </div>
+
+              <span>Learn more</span>
+
+              <svg class="ml-auto hidden" stroke="currentColor" fill="currentColor" stroke-width="0"
+                   viewBox="0 0 1024 1024" height="1em" width="1em"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"></path>
+              </svg>
+            </li>
+
+            <li class="sidebar-item">
+              <div class="w-5 mx-[5px]">
+                <div class="w-[14px] h-[14px] border border-[#d7d7d6] rounded-[4px]"></div>
+              </div>
+
+              <span>Learn more-2</span>
+
+              <svg class="ml-auto hidden" stroke="currentColor" fill="currentColor" stroke-width="0"
+                   viewBox="0 0 1024 1024" height="1em" width="1em"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"></path>
+              </svg>
+            </li>
+          </ul>
+        </li>
+
+        <li class="flex items-center px-2 py-1 cursor-pointer w-full rounded-md hover:text-primary mb-1 text-secondary items-center mt-3">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2 4C2 3.58579 2.28782 3.25 2.64286 3.25H13.3571C13.7122 3.25 14 3.58579 14 4C14 4.41421 13.7122 4.75 13.3571 4.75H2.64286C2.28782 4.75 2 4.41421 2 4ZM2 8C2 7.58579 2.28782 7.25 2.64286 7.25H13.3571C13.7122 7.25 14 7.58579 14 8C14 8.41421 13.7122 8.75 13.3571 8.75H2.64286C2.28782 8.75 2 8.41421 2 8ZM2 12C2 11.5858 2.28782 11.25 2.64286 11.25H13.3571C13.7122 11.25 14 11.5858 14 12C14 12.4142 13.7122 12.75 13.3571 12.75H2.64286C2.28782 12.75 2 12.4142 2 12Z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <span>Browse all</span>
+        </li>
+
+        <li class="flex items-center px-2 py-1 cursor-pointer w-full rounded-md hover:text-primary mb-1 text-secondary items-center">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.5 3.75a.75.75 0 00-1.5 0V7H3.75a.75.75 0 000 1.5H7v3.25a.75.75 0 001.5 0V8.5h3.25a.75.75 0 000-1.5H8.5V3.75z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <span>New</span>
+        </li>
+
+        <li class="flex items-center pl-2 py-1 cursor-pointer w-full rounded-md hover:text-primary mb-1 text-secondary items-center mt-auto group">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.5 3.75a.75.75 0 00-1.5 0V7H3.75a.75.75 0 000 1.5H7v3.25a.75.75 0 001.5 0V8.5h3.25a.75.75 0 000-1.5H8.5V3.75z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <span>Invite people</span>
+          <div class="ml-auto p-1 rounded-full hover:bg-greyBtnHoverBg opacity-0 group-hover:opacity-100">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                 fill-rule="evenodd" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M799.855 166.312c.023.007.043.018.084.059l57.69 57.69c.041.041.052.06.059.084a.118.118 0 0 1 0 .069c-.007.023-.018.042-.059.083L569.926 512l287.703 287.703c.041.04.052.06.059.083a.118.118 0 0 1 0 .07c-.007.022-.018.042-.059.083l-57.69 57.69c-.041.041-.06.052-.084.059a.118.118 0 0 1-.069 0c-.023-.007-.042-.018-.083-.059L512 569.926 224.297 857.629c-.04.041-.06.052-.083.059a.118.118 0 0 1-.07 0c-.022-.007-.042-.018-.083-.059l-57.69-57.69c-.041-.041-.052-.06-.059-.084a.118.118 0 0 1 0-.069c.007-.023.018-.042.059-.083L454.073 512 166.371 224.297c-.041-.04-.052-.06-.059-.083a.118.118 0 0 1 0-.07c.007-.022.018-.042.059-.083l57.69-57.69c.041-.041.06-.052.084-.059a.118.118 0 0 1 .069 0c.023.007.042.018.083.059L512 454.073l287.703-287.702c.04-.041.06-.052.083-.059a.118.118 0 0 1 .07 0Z"></path>
+            </svg>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-footer">
+        <ul class="flex justify-between pl-2">
+          <li class="p-[6px] rounded-full hover:bg-greyBtnHoverBg hover:text-primary">
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
+                 aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.857 6.595h.67c.182 0 .393-.164.462-.358.064-.18.14-.36.223-.533.09-.185.057-.449-.072-.577l-.477-.477a.858.858 0 010-1.212l.775-.774a.852.852 0 01.606-.251c.229 0 .444.089.606.25l.477.478a.489.489 0 00.34.122.544.544 0 00.237-.05c.173-.085.353-.16.533-.224.194-.069.359-.28.359-.462v-.67c0-.472.384-.857.857-.857h1.095c.473 0 .857.385.857.857v.67c0 .182.164.393.358.462.18.064.36.139.533.223.068.032.151.05.236.05a.49.49 0 00.342-.122l.476-.477a.852.852 0 01.606-.25c.23 0 .444.089.606.25l.775.775a.851.851 0 01.252.606c0 .229-.09.444-.251.606l-.477.477c-.129.128-.162.393-.072.577.083.174.158.353.222.533.07.194.28.358.462.358h.67c.473 0 .857.385.857.857v1.096a.858.858 0 01-.857.857h-.67c-.182 0-.393.164-.462.358a5.31 5.31 0 01-.223.533c-.089.184-.056.448.072.577l.478.477a.858.858 0 010 1.212l-.776.775a.851.851 0 01-.606.251.852.852 0 01-.606-.25l-.477-.478a.49.49 0 00-.342-.122.542.542 0 00-.235.05 5.288 5.288 0 01-.533.223c-.194.069-.358.28-.358.462v.67a.858.858 0 01-.857.857H7.452a.858.858 0 01-.857-.857v-.67c0-.182-.164-.393-.358-.462a5.323 5.323 0 01-.533-.223.55.55 0 00-.235-.05.49.49 0 00-.342.123l-.477.476a.851.851 0 01-.606.252.851.851 0 01-.607-.252l-.774-.775a.859.859 0 010-1.212l.477-.477c.128-.128.16-.392.071-.577a5.31 5.31 0 01-.222-.533c-.07-.194-.28-.358-.462-.358h-.67A.858.858 0 011 8.548V7.453c0-.473.385-.858.857-.858zM11.563 8a3.563 3.563 0 11-7.126 0 3.563 3.563 0 017.125 0z"></path>
+              </svg>
+
+          </li>
+
+          <li class="py-[6px] px-4 rounded-full bg-greyBtnHoverBg hover:text-primary">
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M7.25 7.875h.625V5a.125.125 0 11.25 0v2.875H11a.125.125 0 010 .25H8.125V11a.125.125 0 01-.25 0V8.125H5a.125.125 0 110-.25h2.25zm3.75-6H5A3.125 3.125 0 001.875 5v6c0 1.726 1.4 3.125 3.125 3.125h6c1.726 0 3.125-1.4 3.125-3.125V5c0-1.726-1.4-3.125-3.125-3.125zM1.625 5A3.375 3.375 0 015 1.625h6A3.375 3.375 0 0114.375 5v6A3.375 3.375 0 0111 14.375H5A3.375 3.375 0 011.625 11V5z"
+                  stroke="var(--fill)" stroke-width="1.25"></path>
+            </svg>
+          </li>
+
+          <li class="p-[6px] rounded-full hover:bg-greyBtnHoverBg hover:text-primary">
+
+            <svg class="w-4 h-4" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.8 8A5.8 5.8 0 112.2 8a5.8 5.8 0 0111.6 0zM15 8A7 7 0 111 8a7 7 0 0114 0zM8.387 9.648h-1.3c-.051-1.398.351-1.914 1.097-2.375.492-.308.836-.675.836-1.214 0-.614-.48-1.012-1.078-1.012-.55 0-1.082.351-1.117 1.086h-1.39C5.472 4.648 6.582 3.89 7.95 3.89c1.492 0 2.52.828 2.52 2.148 0 .852-.41 1.441-1.118 1.879-.719.441-.965.781-.965 1.73zm.262 1.622c.004.468-.387.843-.883.843a.863.863 0 01-.879-.843c.004-.473.395-.844.88-.844.495 0 .886.37.882.844z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+  <!--  Content part -->
+  <div class="content flex-1 h-screen flex flex-col ">
+<!--    class="fixed bg-white left-[220px] right-0"-->
+    <header >
+      <div class="header-wrapper flex py-3 px-8">
+        <div class="title text-primary font-medium flex items-center">
+          <div class="w-5 mx-[5px]">
+            <svg class="w-[16px] h-[16px]" fill="currentColor" stroke="currentColor" stroke-width="0"
+                 viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 13.75C11.1756 13.75 13.75 11.1756 13.75 8C13.75 4.82436 11.1756 2.25 8 2.25C4.82436 2.25 2.25 4.82436 2.25 8C2.25 11.1756 4.82436 13.75 8 13.75ZM8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 10.75C9.51878 10.75 10.75 9.51878 10.75 8C10.75 6.48122 9.51878 5.25 8 5.25C6.48122 5.25 5.25 6.48122 5.25 8C5.25 9.51878 6.48122 10.75 8 10.75ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12ZM8 9C8.55228 9 9 8.55228 9 8C9 7.44772 8.55228 7 8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9Z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+
+          <span>Assigned to me</span>
+        </div>
+        <button class="text-secondary ml-auto mr-1 py-1 px-2 rounded-md hover:bg-btnBgHover header-btn-active">Filters
+        </button>
+        <button class="text-secondary mr-1 py-1 px-2 rounded-md hover:bg-btnBgHover flex items-center">
+          <svg class="w-[16px] h-[16px] mr-2" stroke="currentColor" fill="currentColor" stroke-width="0"
+               viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.5 2.75H11V4.5H14.75V4C14.75 3.30964 14.1904 2.75 13.5 2.75ZM14.75 5.5H11V7.5H14.75V5.5ZM10 5.5V7.5H1.25V5.5H10ZM10 8.5H1.25V10.5H10V8.5ZM10 11.5H1.25V12C1.25 12.6904 1.80964 13.25 2.5 13.25H10V11.5ZM11 11.5H14.75V12C14.75 12.6904 14.1904 13.25 13.5 13.25H11V11.5ZM14.75 10.5H11V8.5H14.75V10.5ZM10 4.5V2.75H2.5C1.80964 2.75 1.25 3.30964 1.25 4V4.5H10ZM2.5 14.5H10H11H13.5C14.8807 14.5 16 13.3807 16 12V4C16 2.61929 14.8807 1.5 13.5 1.5H2.5C1.11929 1.5 0 2.61929 0 4V12C0 13.3807 1.11929 14.5 2.5 14.5Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          <span>Spreadsheets</span></button>
+        <button class="mr-1 py-1 px-2 rounded-full hover:bg-btnBgHover ">
+          <svg class="w-[16px] h-[16px]" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.5 6.25a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zm5 0a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zm6.25 1.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+      </div>
+
+    </header>
+
+    <div class="mt-4 px-8 ">
+<!--      fixed bg-white top-[49px] left-[248px]-->
+      <div class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder border-b-[1px] ">
+        <h3 class="py-2 pr-2">Tasks</h3>
+        <div class="text-secondary">Status</div>
+        <div>Assignees</div>
+        <div>Lists</div>
+        <div>
+          <svg class="w-5 h-5" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"
+               height="1em" width="1em"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </div>
+      </div>
+
+<!--      <div class="pt-[72px]">-->
+      <div class="overflow-auto h-full">
+        <div
+            class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 pr-2 border-b-[1px] ">
+
+          <div class="flex items-center">
+            <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+            <span>Welcome 👋</span>
+          </div>
+
+        </div>
+
+        <div
+            class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 pr-2 border-b-[1px] ">
+
+          <div class="flex items-center">
+            <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+            <span>Try it now</span>
+          </div>
+
+        </div>
+
+        <div
+            class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 pr-2 border-b-[1px] ">
+          <div class="flex items-center">
+            <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+            <span>Try it now</span>
+          </div>
+        </div>
+
+        <p class="w-5">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, blanditiis corporis doloremque dolores
+          expedita hic illo incidunt libero magni maxime neque nostrum nulla numquam optio, perspiciatis quia quo
+          tempora temporibus totam voluptate. Ducimus earum esse id illum magnam obcaecati quo repellendus similique
+          sint veritatis, vitae voluptate voluptatem. Accusamus alias asperiores corporis cum, deleniti dolorem, error
+          eveniet harum illo impedit inventore molestias necessitatibus placeat possimus quibusdam quidem quod
+          repudiandae suscipit. Dolorem eaque explicabo minus nemo quia, quos repudiandae! Ea eius eveniet fuga iste non
+          soluta! Aliquid aperiam at cupiditate debitis deserunt distinctio eaque, eligendi facilis iure magnam
+          molestias natus nemo nihil non nostrum pariatur porro quae quia sed sint, sit tempora voluptatem. A accusamus
+          ad aliquam amet asperiores at commodi cupiditate deserunt, dicta dolores doloribus ducimus ea esse fugiat in
+          iusto labore, natus, necessitatibus non nulla perferendis quam saepe vel voluptas voluptate! Ipsam omnis
+          similique vitae? Eaque eos fugiat id illum, impedit magnam molestiae necessitatibus omnis repellat.
+          Accusantium aperiam ex hic ipsa, ipsum iste laudantium nostrum, officia perferendis quibusdam rem sit! Commodi
+          ducimus itaque minus molestias nihil nulla numquam recusandae sed sequi? Dolorem nesciunt numquam repudiandae,
+          ut veritatis voluptatibus? Accusamus amet assumenda exercitationem ipsa magnam natus quaerat ratione similique
+          vel voluptatum.
+
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
