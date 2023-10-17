@@ -283,11 +283,11 @@
     </header>
 
     <div class="mt-4 pl-2 pr-1 flex-1 h-screen">
-      <div class="pr-8 mr-8">
 
-        <!--        table header-->
-        <div class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-lightBorder border-b-[1px] ml-8 ">
-          <div class="group py-[7px] flex items-center group cursor-pointer">
+      <!--        table header-->
+      <div class=" mr-8">
+        <div class=" grid grid-cols-[3fr_1fr_1fr_1fr_auto] ">
+          <div class="group py-[7px] flex items-center group cursor-pointer ml-8">
             <h3 class="py-2 pr-2">Tasks</h3>
             <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor "
                  stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -338,19 +338,21 @@
             </svg>
           </div>
         </div>
+
       </div>
+      <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
 
       <!--      table rows-->
-      <div class="overflow-y-scroll h-full ml-8 ">
+      <div class="overflow-y-scroll h-full  ">
         <div class="pr-[18px]">
           <div
-              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder  pr-2 border-b-[1px] group hover:bg-tableRowHover">
+              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto]  pr-2 group hover:bg-tableRowHover rounded-md">
             <div class="flex items-center rounded-md hover:bg-tableCellsHover ">
-              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2 ml-8"></div>
               <span>Welcome 👋</span>
+              <svg class="w-4 h-4 ml-auto mr-2 fill-secondary opacity-0 group-hover:opacity-100" stroke="currentColor"  stroke-width="0" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.3068 1.71387C11.6973 1.32334 12.3305 1.32334 12.721 1.71387L14.1174 3.11021C14.5079 3.50073 14.5079 4.1339 14.1174 4.52442L7.77325 10.8685L4.68434 13.9724C4.5905 14.0667 4.46296 14.1197 4.32993 14.1197H2.71262C2.16033 14.1197 1.71262 13.672 1.71262 13.1197V11.502C1.71262 11.3692 1.76546 11.2419 1.85949 11.1481L5.10194 7.91351C5.10855 7.90692 5.11584 7.90145 5.1236 7.89709L11.3068 1.71387ZM6.13054 10.818L5.01137 9.69886L2.91262 11.7925L2.91262 12.9197H4.03899L6.13054 10.818ZM12.4473 2.6973C12.252 2.50204 11.9355 2.50204 11.7402 2.6973L11.6383 2.81018C11.443 3.00544 11.443 3.32203 11.6383 3.51729L12.3398 4.21875C12.535 4.41401 12.8516 4.41401 13.0469 4.21875L13.1488 4.10587C13.344 3.91061 13.344 3.59403 13.1488 3.39877L12.4473 2.6973Z" fill="var(--fill)"></path>
+              </svg>
             </div>
-
-
             <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
               <span class="bg-white px-[3px] py-[1px] rounded-[4px] opacity-0 group-hover:opacity-100 border border-lightBorder ">
                 To do
@@ -361,7 +363,6 @@
                   class="h-[22px] w-[22px] rounded-full bg-[#8d6e63] text-[13px] flex justify-center items-center text-white ">
                 M
               </div>
-
             </div>
             <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px] group">
               <div
@@ -375,31 +376,12 @@
                 </svg>
               </div>
             </div>
-
             <div>
               <div class="opacity-0">d</div>
             </div>
-
-
           </div>
 
-          <div
-              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 border-b-[1px]">
 
-            <div class="flex items-center">
-              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
-              <span>Try it now</span>
-            </div>
-
-          </div>
-
-          <div
-              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 border-b-[1px]  ">
-            <div class="flex items-center">
-              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
-              <span>Try it now</span>
-            </div>
-          </div>
 
 
         </div>
