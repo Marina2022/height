@@ -22,6 +22,7 @@ export default {
         tableCellsBg: '#edeff0',
         tableCellsBgHover: '#dcdedf',
         tableRowHover: '#fcfcfc',
+        commentText: '#9ba5ab',
 
       },
       boxShadow: {
