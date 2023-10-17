@@ -29,15 +29,32 @@
   border-right: 2px solid transparent;
 }
 
-.rotated {
-  transform: rotate(-90deg);
+
+.check-input:checked + .label {
+  background: #00b8a8;
+  fill: white;
+  border: none;
+}
+
+.check-input:checked + .label svg {
+  display: block;
+  padding: 2.5px;
+
 }
 
 
-@layer base {
 
+@layer base {
   .item-active > svg {
     @apply block
+  }
+
+  .rotated {
+    @apply -rotate-90
+  }
+
+  .rotated-row {
+    @apply -rotate-90 origin-center relative left-[3px] top-[3px]
   }
 
 }
