@@ -18,6 +18,10 @@ export default {
         borderLightGrey: '#dedfe0',
         btnBgHover: '#f5f5f5',
         lightBorder: '#f2f3f4',
+        tableCellsHover: '#ebebeb',
+        tableCellsBg: '#edeff0',
+        tableCellsBgHover: '#dcdedf',
+        tableRowHover: '#fcfcfc',
 
       },
       boxShadow: {

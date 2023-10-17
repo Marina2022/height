@@ -17,7 +17,8 @@
 
   <!--  Sidebar-->
 
-  <div class="sidebar w-[220px] bg-[#f7f7f8] border border-borderLightGrey border-r-1 p-[10px] text-sm text-secondary h-screen">
+  <div
+      class="sidebar w-[220px] bg-[#f7f7f8] border border-borderLightGrey border-r-1 p-[10px] text-sm text-secondary h-screen">
     <nav class="h-[100%] flex flex-col">
       <div class="flex items-center px-2 cursor-pointer w-full rounded-md  hover:bg-[#eaeaea] group">
         <span
@@ -243,10 +244,10 @@
     </nav>
   </div>
 
+
   <!--  Content part -->
-  <div class="content flex-1 h-screen flex flex-col ">
-<!--    class="fixed bg-white left-[220px] right-0"-->
-    <header >
+  <div class="content flex-1 h-screen flex flex-col overflow-hidden">
+    <header>
       <div class="header-wrapper flex py-3 px-8">
         <div class="title text-primary font-medium flex items-center">
           <div class="w-5 mx-[5px]">
@@ -279,73 +280,129 @@
           </svg>
         </button>
       </div>
-
     </header>
 
-    <div class="mt-4 px-8 ">
-<!--      fixed bg-white top-[49px] left-[248px]-->
-      <div class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder border-b-[1px] ">
-        <h3 class="py-2 pr-2">Tasks</h3>
-        <div class="text-secondary">Status</div>
-        <div>Assignees</div>
-        <div>Lists</div>
-        <div>
-          <svg class="w-5 h-5" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"
-               height="1em" width="1em"
-               xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-          </svg>
+    <div class="mt-4 pl-2 pr-1 flex-1 h-screen">
+      <div class="pr-8 mr-8">
+
+        <!--        table header-->
+        <div class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-lightBorder border-b-[1px] ml-8 ">
+          <div class="group py-[7px] flex items-center group cursor-pointer">
+            <h3 class="py-2 pr-2">Tasks</h3>
+            <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor "
+                 stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+
+          <div
+              class="text-secondary hover:border-l-[1px] hover:border-lightBorder pl-3 py-[7px] flex items-center group hover:text-primary cursor-pointer">
+            <span>Status</span>
+            <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor"
+                 stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <div
+              class="text-secondary hover:border-l-[1px] hover:border-lightBorder pl-3 py-[7px] flex items-center group hover:text-primary cursor-pointer">
+            <span>
+              Assignees
+            </span>
+            <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor"
+                 stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <div
+              class="text-secondary hover:border-l-[1px] hover:border-lightBorder pl-3 py-[7px] flex items-center group hover:text-primary cursor-pointer">
+            <span>Lists</span>
+            <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor"
+                 stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </div>
+          <div class="py-[7px]">
+            <svg class="w-5 h-5" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                 aria-hidden="true"
+                 height="1em" width="1em"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+          </div>
         </div>
       </div>
 
-<!--      <div class="pt-[72px]">-->
-      <div class="overflow-auto h-full">
-        <div
-            class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 pr-2 border-b-[1px] ">
+      <!--      table rows-->
+      <div class="overflow-y-scroll h-full ml-8 ">
+        <div class="pr-[18px]">
+          <div
+              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder  pr-2 border-b-[1px] group hover:bg-tableRowHover">
+            <div class="flex items-center rounded-md hover:bg-tableCellsHover ">
+              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+              <span>Welcome 👋</span>
+            </div>
 
-          <div class="flex items-center">
-            <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
-            <span>Welcome 👋</span>
+
+            <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
+              <span class="bg-white px-[3px] py-[1px] rounded-[4px] opacity-0 group-hover:opacity-100 border border-lightBorder ">
+                To do
+              </span>
+            </div>
+            <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
+              <div
+                  class="h-[22px] w-[22px] rounded-full bg-[#8d6e63] text-[13px] flex justify-center items-center text-white ">
+                M
+              </div>
+
+            </div>
+            <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px] group">
+              <div
+                  class="bg-tableCellsBg w-[24px] h-[22px] flex items-center justify-center rounded-md group-hover:bg-tableCellsBgHover">
+                <svg class="w-[16px] h-[16px]" stroke="currentColor" fill="currentColor" stroke-width="0"
+                     viewBox="0 0 16 16"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2.667 8a2 2 0 011.666-1.972V5a3.667 3.667 0 017.334 0v1.028A2 2 0 0113.333 8v4a2 2 0 01-2 2H4.667a2 2 0 01-2-2V8zm7.666-3v1H5.667V5a2.333 2.333 0 014.666 0zm-5 2.333C4.597 7.333 4 7.93 4 8.667v2.666c0 .737.597 1.334 1.333 1.334h5.334c.736 0 1.333-.597 1.333-1.334V8.667c0-.737-.597-1.334-1.333-1.334H5.333z"
+                        fill="var(--fill)"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div>
+              <div class="opacity-0">d</div>
+            </div>
+
+
           </div>
 
-        </div>
+          <div
+              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 border-b-[1px]">
 
-        <div
-            class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 pr-2 border-b-[1px] ">
+            <div class="flex items-center">
+              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+              <span>Try it now</span>
+            </div>
 
-          <div class="flex items-center">
-            <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
-            <span>Try it now</span>
           </div>
 
-        </div>
-
-        <div
-            class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 pr-2 border-b-[1px] ">
-          <div class="flex items-center">
-            <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
-            <span>Try it now</span>
+          <div
+              class="w-full grid grid-cols-[3fr_1fr_1fr_1fr_auto] border-b-1 border-lightBorder py-2 border-b-[1px]  ">
+            <div class="flex items-center">
+              <div class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2"></div>
+              <span>Try it now</span>
+            </div>
           </div>
+
+
         </div>
-
-        <p class="w-5">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, blanditiis corporis doloremque dolores
-          expedita hic illo incidunt libero magni maxime neque nostrum nulla numquam optio, perspiciatis quia quo
-          tempora temporibus totam voluptate. Ducimus earum esse id illum magnam obcaecati quo repellendus similique
-          sint veritatis, vitae voluptate voluptatem. Accusamus alias asperiores corporis cum, deleniti dolorem, error
-          eveniet harum illo impedit inventore molestias necessitatibus placeat possimus quibusdam quidem quod
-          repudiandae suscipit. Dolorem eaque explicabo minus nemo quia, quos repudiandae! Ea eius eveniet fuga iste non
-          soluta! Aliquid aperiam at cupiditate debitis deserunt distinctio eaque, eligendi facilis iure magnam
-          molestias natus nemo nihil non nostrum pariatur porro quae quia sed sint, sit tempora voluptatem. A accusamus
-          ad aliquam amet asperiores at commodi cupiditate deserunt, dicta dolores doloribus ducimus ea esse fugiat in
-          iusto labore, natus, necessitatibus non nulla perferendis quam saepe vel voluptas voluptate! Ipsam omnis
-          similique vitae? Eaque eos fugiat id illum, impedit magnam molestiae necessitatibus omnis repellat.
-          Accusantium aperiam ex hic ipsa, ipsum iste laudantium nostrum, officia perferendis quibusdam rem sit! Commodi
-          ducimus itaque minus molestias nihil nulla numquam recusandae sed sequi? Dolorem nesciunt numquam repudiandae,
-          ut veritatis voluptatibus? Accusamus amet assumenda exercitationem ipsa magnam natus quaerat ratione similique
-          vel voluptatum.
-
-        </p>
       </div>
 
     </div>
