@@ -18,7 +18,7 @@
   <!--  Sidebar-->
 
   <div
-      class="sidebar w-[220px] bg-[#f7f7f8] border border-borderLightGrey border-r-1 p-[10px] text-sm text-secondary h-screen">
+      class="sidebar w-[220px] bg-[#f7f7f8] border border-borderLightGrey border-r-1 p-[10px] text-sm text-secondary h-screen shrink-0">
     <nav class="h-[100%] flex flex-col">
       <div class="flex items-center px-2 cursor-pointer w-full rounded-md  hover:bg-[#eaeaea] group">
         <span
@@ -373,6 +373,7 @@
                 </svg>
                 <span class="text-commentText text-[12px] ml-1">4</span>
 
+
                 <svg class="w-4 h-4 ml-auto mr-2 fill-secondary opacity-0 group-hover:opacity-100" stroke="currentColor"
                      stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -437,6 +438,16 @@
                           d="M5.25 4.125C4.62868 4.125 4.125 4.62868 4.125 5.25C4.125 5.87132 4.62868 6.375 5.25 6.375C5.87132 6.375 6.375 5.87132 6.375 5.25C6.375 4.62868 5.87132 4.125 5.25 4.125ZM2.875 5.25C2.875 3.93832 3.93832 2.875 5.25 2.875C6.56168 2.875 7.625 3.93832 7.625 5.25C7.625 6.34589 6.88276 7.26841 5.87358 7.54229C5.81831 8.43515 6.00242 9.01128 6.25231 9.39043C6.50389 9.77213 6.86178 10.0142 7.25686 10.1671C7.65523 10.3214 8.07279 10.3769 8.40195 10.391C8.57499 9.24969 9.56035 8.375 10.75 8.375C12.0617 8.375 13.125 9.43832 13.125 10.75C13.125 12.0617 12.0617 13.125 10.75 13.125C9.7549 13.125 8.90274 12.513 8.54936 11.6449C8.48786 11.6445 8.42207 11.643 8.35261 11.6401C7.94008 11.6227 7.3747 11.5531 6.80562 11.3329C6.23196 11.1108 5.63672 10.7279 5.20861 10.0783C4.78954 9.44249 4.56803 8.60789 4.6217 7.54101C3.61492 7.26554 2.875 6.34418 2.875 5.25ZM10.75 9.625C10.1287 9.625 9.625 10.1287 9.625 10.75C9.625 11.3713 10.1287 11.875 10.75 11.875C11.3713 11.875 11.875 11.3713 11.875 10.75C11.875 10.1287 11.3713 9.625 10.75 9.625Z"></path>
                   </svg>
                   <span class="text-commentText text-[12px] ml-1">5</span>
+                  <!--      button switches to edit mode -->
+                  <button class="edit-btn ml-auto mr-2">
+                    <svg class="w-4 h-4 fill-secondary opacity-0 group-hover:opacity-100"
+                         stroke="currentColor"
+                         stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.3068 1.71387C11.6973 1.32334 12.3305 1.32334 12.721 1.71387L14.1174 3.11021C14.5079 3.50073 14.5079 4.1339 14.1174 4.52442L7.77325 10.8685L4.68434 13.9724C4.5905 14.0667 4.46296 14.1197 4.32993 14.1197H2.71262C2.16033 14.1197 1.71262 13.672 1.71262 13.1197V11.502C1.71262 11.3692 1.76546 11.2419 1.85949 11.1481L5.10194 7.91351C5.10855 7.90692 5.11584 7.90145 5.1236 7.89709L11.3068 1.71387ZM6.13054 10.818L5.01137 9.69886L2.91262 11.7925L2.91262 12.9197H4.03899L6.13054 10.818ZM12.4473 2.6973C12.252 2.50204 11.9355 2.50204 11.7402 2.6973L11.6383 2.81018C11.443 3.00544 11.443 3.32203 11.6383 3.51729L12.3398 4.21875C12.535 4.41401 12.8516 4.41401 13.0469 4.21875L13.1488 4.10587C13.344 3.91061 13.344 3.59403 13.1488 3.39877L12.4473 2.6973Z"
+                      ></path>
+                    </svg>
+                  </button>
 
                 </div>
                 <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
@@ -474,7 +485,6 @@
             <div class="collapse-container">
 
 
-
               <!--            divider + row-->
               <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
               <div class="pr-[18px]">
@@ -504,7 +514,8 @@
                       <!--                      <div class="text ml-[48px]">Double-click on this task to open it</div>-->
 
 
-                      <div class="text ml-[48px]">Select this task and press <span class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> to edit the name
+                      <div class="text ml-[48px]">Select this task and press <span
+                          class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> to edit the name
                       </div>
                       <svg class="w-5 h-5 stroke-commentText ml-3" fill="none" stroke-width="0" viewBox="0 0 16 16"
                            xmlns="http://www.w3.org/2000/svg">
@@ -514,9 +525,7 @@
                       </svg>
                       <span class="text-commentText text-[12px] ml-1">7</span>
 
-
                       <!--      button switches to edit mode -->
-
                       <button class="edit-btn ml-auto mr-2">
                         <svg class="w-4 h-4 fill-secondary opacity-0 group-hover:opacity-100"
                              stroke="currentColor"
@@ -586,9 +595,11 @@
 
                     <!--  show static-row when in normal mode-->
                     <div class="flex items-center rounded-md hover:bg-tableCellsHover pl-9 static-row">
-<!--                      <div class="text ml-[48px]">Double-click on this task to open it</div>-->
+                      <!--                      <div class="text ml-[48px]">Double-click on this task to open it</div>-->
 
-                      <div class="text ml-[48px]">Press <span class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> again to create a new task
+                      <div class="text ml-[48px]">Press <span
+                          class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> again to create a new
+                        task
                       </div>
                       <svg class="w-5 h-5 stroke-commentText ml-3" fill="none" stroke-width="0" viewBox="0 0 16 16"
                            xmlns="http://www.w3.org/2000/svg">
@@ -923,7 +934,16 @@
                           d="M5.25 4.125C4.62868 4.125 4.125 4.62868 4.125 5.25C4.125 5.87132 4.62868 6.375 5.25 6.375C5.87132 6.375 6.375 5.87132 6.375 5.25C6.375 4.62868 5.87132 4.125 5.25 4.125ZM2.875 5.25C2.875 3.93832 3.93832 2.875 5.25 2.875C6.56168 2.875 7.625 3.93832 7.625 5.25C7.625 6.34589 6.88276 7.26841 5.87358 7.54229C5.81831 8.43515 6.00242 9.01128 6.25231 9.39043C6.50389 9.77213 6.86178 10.0142 7.25686 10.1671C7.65523 10.3214 8.07279 10.3769 8.40195 10.391C8.57499 9.24969 9.56035 8.375 10.75 8.375C12.0617 8.375 13.125 9.43832 13.125 10.75C13.125 12.0617 12.0617 13.125 10.75 13.125C9.7549 13.125 8.90274 12.513 8.54936 11.6449C8.48786 11.6445 8.42207 11.643 8.35261 11.6401C7.94008 11.6227 7.3747 11.5531 6.80562 11.3329C6.23196 11.1108 5.63672 10.7279 5.20861 10.0783C4.78954 9.44249 4.56803 8.60789 4.6217 7.54101C3.61492 7.26554 2.875 6.34418 2.875 5.25ZM10.75 9.625C10.1287 9.625 9.625 10.1287 9.625 10.75C9.625 11.3713 10.1287 11.875 10.75 11.875C11.3713 11.875 11.875 11.3713 11.875 10.75C11.875 10.1287 11.3713 9.625 10.75 9.625Z"></path>
                   </svg>
                   <span class="text-commentText text-[12px] ml-1">3</span>
-
+                  <!--      button switches to edit mode -->
+                  <button class="edit-btn ml-auto mr-2">
+                    <svg class="w-4 h-4 fill-secondary opacity-0 group-hover:opacity-100"
+                         stroke="currentColor"
+                         stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.3068 1.71387C11.6973 1.32334 12.3305 1.32334 12.721 1.71387L14.1174 3.11021C14.5079 3.50073 14.5079 4.1339 14.1174 4.52442L7.77325 10.8685L4.68434 13.9724C4.5905 14.0667 4.46296 14.1197 4.32993 14.1197H2.71262C2.16033 14.1197 1.71262 13.672 1.71262 13.1197V11.502C1.71262 11.3692 1.76546 11.2419 1.85949 11.1481L5.10194 7.91351C5.10855 7.90692 5.11584 7.90145 5.1236 7.89709L11.3068 1.71387ZM6.13054 10.818L5.01137 9.69886L2.91262 11.7925L2.91262 12.9197H4.03899L6.13054 10.818ZM12.4473 2.6973C12.252 2.50204 11.9355 2.50204 11.7402 2.6973L11.6383 2.81018C11.443 3.00544 11.443 3.32203 11.6383 3.51729L12.3398 4.21875C12.535 4.41401 12.8516 4.41401 13.0469 4.21875L13.1488 4.10587C13.344 3.91061 13.344 3.59403 13.1488 3.39877L12.4473 2.6973Z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
                 <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
               <span
@@ -1234,22 +1254,25 @@
             </svg>
             <span>New task</span>
           </button>
-
-        </div>
-        <div class="ml-[20px] mt-auto mb-4 flex items-center"><span class="text-md mr-1">10</span> <span
-            class="text-sm">tasks</span>
-
-          <button>
-            <svg class="w-4 h-4 ml-2" stroke="currentColor" fill="currentColor"
-                 stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
-              ></path>
-            </svg>
-          </button>
         </div>
       </div>
+
+
     </div>
+
+    <div class="ml-[20px] mt-auto mb-4 flex items-center">
+      <span class="text-md mr-1">10</span>
+      <span class="text-sm">tasks</span>
+      <button>
+        <svg class="w-4 h-4 ml-2" stroke="currentColor" fill="currentColor"
+             stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
   </div>
 </div>
 
