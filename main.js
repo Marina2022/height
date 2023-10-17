@@ -4,9 +4,13 @@ const dropdownArrow = document.querySelector('.dropdown-arrow')
 const collapseRowsBtns = document.querySelectorAll('.collapse-rows-btn')
 const editBtns = document.querySelectorAll('.edit-btn')
 
+const filterBtn = document.querySelector('.filter-btn')
+const filterBlock = document.querySelector('.filter-block')
 
-// const dropDownContainer = document.querySelector('.drop-down-container')
-// const
+filterBtn.addEventListener('click', ()=>{
+  filterBtn.classList.toggle('header-btn-active')
+  filterBlock.classList.toggle('hidden')
+})
 
 sidebarDropdown.addEventListener('click', () => {
   sidebarCollapsable.classList.toggle('hidden')

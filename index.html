@@ -16,7 +16,6 @@
 <div class="main-wrapper flex h-screen w-full text-primary">
 
   <!--  Sidebar-->
-
   <div
       class="sidebar w-[220px] bg-[#f7f7f8] border border-borderLightGrey border-r-1 p-[10px] text-sm text-secondary h-screen shrink-0">
     <nav class="h-[100%] flex flex-col">
@@ -244,11 +243,10 @@
     </nav>
   </div>
 
-
   <!--  Content part -->
-  <div class="content flex-1 h-screen flex flex-col  w-full">
+  <div class="content flex-1 h-screen flex flex-col w-full">
     <header>
-      <div class="header-wrapper flex py-3 px-8">
+      <div class="header-wrapper flex py-3 px-8 screen-width-minus-sidebar">
         <div class="title text-primary font-medium flex items-center">
           <div class="w-5 mx-[5px]">
             <svg class="w-[16px] h-[16px]" fill="currentColor" stroke="currentColor" stroke-width="0"
@@ -261,7 +259,7 @@
 
           <span>Assigned to me</span>
         </div>
-        <button class="text-secondary ml-auto mr-1 py-1 px-2 rounded-md hover:bg-btnBgHover header-btn-active">Filters
+        <button class="text-secondary ml-auto mr-1 py-1 px-2 rounded-md hover:bg-btnBgHover filter-btn">Filters
         </button>
         <button class="text-secondary mr-1 py-1 px-2 rounded-md hover:bg-btnBgHover flex items-center">
           <svg class="w-[16px] h-[16px] mr-2" stroke="currentColor" fill="currentColor" stroke-width="0"
@@ -282,15 +280,56 @@
       </div>
     </header>
 
+    <div class="px-[32px] screen-width-minus-sidebar">
+      <div
+          class="filter-block p-1 rounded-lg border border-borderLightGrey flex justify-between hidden">
+        <ul class="bg-tableCellsBg rounded-lg flex">
+          <li class="py-1 px-2 border-r-[1px] border-borderGrey">Asignees</li>
+          <li class="py-1 px-2 border-r-[1px] border-borderGrey
+        hover:bg-greyBtnHoverBg">contains any of
+          </li>
+          <li class="py-1 px-2 flex hover:bg-greyBtnHoverBg">
+            <div
+                class="h-[22px] w-[22px] rounded-full bg-[#8d6e63] text-[13px] flex justify-center items-center text-white mr-2">
+              M
+            </div>
+            <div class="bg-[#dce0e2] py-[1px] px-[3px] rounded-md flex ">
+
+              <span>Marina I</span>
+            </div>
+          </li>
+        </ul>
+
+        <input class="flex-1 focus:outline-none px-2" type="text">
+
+        <ul class="bg-tableCellsBg rounded-lg flex">
+          <li class="py-1 px-2 border-r-[1px] border-borderGrey">Show completed</li>
+          <li class="py-1 px-2 border-r-[1px] border-borderGrey
+        hover:bg-greyBtnHoverBg text-primary flex items-center">Never
+            <button>
+              <svg class="w-5 h-5 ml-1" stroke="currentColor" fill="currentColor"
+                   stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                ></path>
+              </svg>
+            </button>
+
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
     <div class="mt-4 pl-2 pr-1 flex-1 h-screen w-full">
 
       <div class="flex-col flex">
 
         <!--        table header-->
 
-        <div class=" mr-8">
-          <div class=" grid grid-cols-[3fr_1fr_1fr_1fr_28px] ">
-            <div class="group  flex items-center group cursor-pointer ml-8">
+        <div class=" mr-8 min-w-[1500px]">
+          <div class="grid grid-cols-[3fr_1fr_1fr_1fr_28px] ">
+            <div class="group  flex items-center group cursor-pointer ml-8 ">
               <h3 class="py-2 pr-2">Tasks</h3>
               <button>
                 <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100" stroke="currentColor" fill="currentColor "
@@ -439,6 +478,7 @@
           <!--        row-->
           <div class="drop-down-container">
 
+            <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
             <div class="pr-[18px]">
               <div class="edit-container relative">
                 <div
@@ -464,6 +504,7 @@
                   <!--  show static-row when in normal mode-->
                   <div class="flex items-center rounded-md hover:bg-tableCellsHover pl-9 static-row">
 
+
                     <button class="collapse-rows-btn absolute left-[8px]">
                       <svg class="fill-commentText w-4 h-4 opacity-0 group-hover:opacity-100" stroke="currentColor"
                            fill="currentColor"
@@ -473,6 +514,7 @@
                         ></path>
                       </svg>
                     </button>
+
 
                     <span class="ml-5 text">Try it now</span>
                     <svg class="w-5 h-5 fill-commentText ml-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -524,11 +566,10 @@
                 </div>
               </div>
             </div>
-
             <div class="collapse-container">
 
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
                 <div class="edit-container relative">
                   <div
@@ -557,14 +598,15 @@
 
 
                       <div class="text ml-[48px]">Select this task and press <span
-                          class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> to edit the name</div>
+                          class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> to edit the name
+                      </div>
                       <svg class="w-5 h-5 stroke-commentText ml-3" fill="none" stroke-width="0" viewBox="0 0 16 16"
                            xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
+                      <span class="text-commentText text-[12px] ml-1">1</span>
 
                       <!--      button switches to edit mode -->
                       <button class="edit-btn ml-auto mr-2">
@@ -609,9 +651,8 @@
                 </div>
               </div>
 
-
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
                 <div class="edit-container relative">
                   <div
@@ -639,14 +680,15 @@
                       <!--                      <div class="text ml-[48px]">Double-click on this task to open it</div>-->
 
                       <div class="text ml-[48px]">Press <span
-                          class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> again to create a new task</div>
+                          class="rounded-md py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> again to create a new task
+                      </div>
                       <svg class="w-5 h-5 stroke-commentText ml-3" fill="none" stroke-width="0" viewBox="0 0 16 16"
                            xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
+                      <span class="text-commentText text-[12px] ml-1">1</span>
 
 
                       <!--      button switches to edit mode -->
@@ -693,9 +735,8 @@
                 </div>
               </div>
 
-
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
                 <div class="edit-container relative">
                   <div
@@ -727,7 +768,7 @@
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
+                      <span class="text-commentText text-[12px] ml-1">3</span>
 
 
                       <!--      button switches to edit mode -->
@@ -774,9 +815,8 @@
                 </div>
               </div>
 
-
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
                 <div class="edit-container relative">
                   <div
@@ -808,7 +848,7 @@
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
+                      <span class="text-commentText text-[12px] ml-1">3</span>
 
 
                       <!--      button switches to edit mode -->
@@ -855,9 +895,8 @@
                 </div>
               </div>
 
-
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
                 <div class="edit-container relative">
                   <div
@@ -876,7 +915,7 @@
                       </svg>
                     </label>
 
-                    <!--                show input when switched to edit-mode-->
+                    <!--    show input when switched to edit-mode-->
                     <input
                         class="edit-input hidden border  focus:outline-none focus:border-2 focus:border-[#8a8a8a] pl-[79px] rounded-md"
                         type="text">
@@ -892,11 +931,9 @@
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
-
+                      <span class="text-commentText text-[12px] ml-1">2</span>
 
                       <!--      button switches to edit mode -->
-
                       <button class="edit-btn ml-auto mr-2">
                         <svg class="w-4 h-4 fill-secondary opacity-0 group-hover:opacity-100"
                              stroke="currentColor"
@@ -1040,7 +1077,7 @@
 
               <!--            divider + row-->
 
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
 
                 <div class="edit-container relative">
@@ -1076,11 +1113,9 @@
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
-
+                      <span class="text-commentText text-[12px] ml-1">2</span>
 
                       <!--      button switches to edit mode -->
-
                       <button class="edit-btn ml-auto mr-2">
                         <svg class="w-4 h-4 fill-secondary opacity-0 group-hover:opacity-100"
                              stroke="currentColor"
@@ -1124,7 +1159,7 @@
               </div>
 
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
 
                 <div class="edit-container relative">
@@ -1136,7 +1171,7 @@
 
                     <!--                checkbox-->
 
-                    <input class="hidden check-input" type="checkbox" id="check-2">
+                    <input class="hidden check-input" type="checkbox" id="check-2" checked>
 
                     <label
                         class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2 ml-8 absolute left-[32px] top-[11px] label"
@@ -1161,11 +1196,9 @@
                             d="M7.58 11.78h-.003l-.371.002c-.843-.043-1.699.029-2.404.649l-.054.052-.001.001-.015.015a3.59 3.59 0 01-.31.278c-.222.177-.426.29-.554.316-.558.112-.893.142-1.407.086v-.003l.011-.046.01-.045c.024-.142.054-.27.09-.425.026-.115.056-.245.089-.404.069-.33.134-.717.134-1.13v-.04c0-.568-.218-1.03-.363-1.338l-.023-.049-.628.294.628-.294a14.415 14.415 0 01-.068-.145l-.682.31.682-.31a8.048 8.048 0 00-.124-.261L2.21 9.28a2.174 2.174 0 01-.072-.155 7.6 7.6 0 01-.13-.349A4.516 4.516 0 016.266 2.75h2.692a4.516 4.516 0 010 9.032L7.58 11.78z"
                             stroke="var(--fill)" stroke-width="1.5" stroke-linejoin="bevel"></path>
                       </svg>
-                      <span class="text-commentText text-[12px] ml-1">7</span>
-
+                      <span class="text-commentText text-[12px] ml-1">4</span>
 
                       <!--      button switches to edit mode -->
-
                       <button class="edit-btn ml-auto mr-2">
                         <svg class="w-4 h-4 fill-secondary opacity-0 group-hover:opacity-100"
                              stroke="currentColor"
@@ -1179,8 +1212,8 @@
                     </div>
                     <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
               <span
-                  class="bg-white px-[3px] py-[1px] rounded-[4px] opacity-0 group-hover:opacity-100 border border-lightBorder ">
-                To do
+                  class="bg-[#00b8a8] text-white px-[3px] py-[1px] rounded-[4px]  ">
+                Done
               </span>
                     </div>
                     <div class="rounded-md hover:bg-tableCellsHover pl-2 py-[7px]">
@@ -1212,7 +1245,7 @@
               <!--draft-->
 
               <!--            divider + row-->
-              <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
+              <div class="h-[1px] bg-lightBorder ml-[60px] mr-8"></div>
               <div class="pr-[18px]">
 
                 <div class="edit-container relative">

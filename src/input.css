@@ -39,7 +39,10 @@
 .check-input:checked + .label svg {
   display: block;
   padding: 2.5px;
+}
 
+.screen-width-minus-sidebar {
+  width: calc(100vw - 220px)
 }
 
 
