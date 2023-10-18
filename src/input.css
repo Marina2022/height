@@ -29,6 +29,10 @@
   border-right: 2px solid transparent;
 }
 
+* {
+  transition: background-color 300ms ease-out;
+}
+
 
 .check-input:checked + .label {
   background: #00b8a8;
@@ -71,11 +75,11 @@
   }
 
   .sidebar-item {
-    @apply flex items-center px-2 py-1 cursor-pointer w-full rounded-md hover:bg-[#eaeaea] mb-1 text-secondary items-center
+    @apply flex items-center px-2 py-[6px] cursor-pointer w-full rounded-lg hover:bg-[#eaeaea] mb-1 text-secondary items-center
   }
 
   .item-active {
-    @apply flex items-center px-2 py-1 cursor-pointer w-full rounded-md   mb-1 bg-[#e6e8e9]  bg-[#e6e8e9] font-medium text-primary items-center
+    @apply flex items-center px-2 py-[6px] cursor-pointer w-full rounded-lg mb-1 bg-[#e6e8e9] font-medium text-primary items-center
   }
 
   .header-btn-active {

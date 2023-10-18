@@ -27,7 +27,8 @@ export default {
       },
       boxShadow: {
         "inputShadow": '0 0 0 2px #9f9fa3',
-        "largeShadow": '0px 10px 60px 0px rgba(0, 0, 0, .15), 0px 15px 25px 0px rgba(0, 0, 0, .1)'
+        "largeShadow": '0px 10px 60px 0px rgba(0, 0, 0, .15), 0px 15px 25px 0px rgba(0, 0, 0, .1)',
+        "btnShadow": '0px 1px 1px 0px rgba(0, 0, 0, .15)'
       }
     },
   },

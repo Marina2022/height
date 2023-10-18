@@ -4,6 +4,7 @@ const dropdownArrow = document.querySelector('.dropdown-arrow')
 const collapseRowsBtns = document.querySelectorAll('.collapse-rows-btn')
 const editBtns = document.querySelectorAll('.edit-btn')
 
+
 const filterBtn = document.querySelector('.filter-btn')
 const filterBlock = document.querySelector('.filter-block')
 
