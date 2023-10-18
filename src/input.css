@@ -5,7 +5,7 @@
 
 * {
   user-select: none;
-  letter-spacing: .000001px;
+  letter-spacing: .5px;
 
   box-sizing: border-box;
   scrollbar-width: thin;
@@ -84,5 +84,9 @@
 
   .header-btn-active {
     @apply bg-btnBgHover
+  }
+
+  .auth-btn {
+    @apply text-secondary font-medium border border-[#e1e4e6] items-center px-2 rounded-lg  flex gap-2 items-center cursor-pointer hover:bg-greyBtnHoverBg border-b-[#c8cdd1] h-[28px]
   }
 }

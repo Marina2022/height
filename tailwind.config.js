@@ -8,7 +8,7 @@ export default {
       },
       colors: {
         primary: 'rgba(0,24,42,1)',
-        secondary: 'rgba(0,24,42, 0.65)',
+        secondary: 'rgba(0,24,42, .6)',
         grey: 'rgba(0,24,42, 0.07)',
         borderGrey: 'rgba(0,24,42, 0.1)',
         btnBlack: 'rgba(0,0,0, 0.84)',
@@ -28,7 +28,8 @@ export default {
       boxShadow: {
         "inputShadow": '0 0 0 2px #9f9fa3',
         "largeShadow": '0px 10px 60px 0px rgba(0, 0, 0, .15), 0px 15px 25px 0px rgba(0, 0, 0, .1)',
-        "btnShadow": '0px 1px 1px 0px rgba(0, 0, 0, .15)'
+        "btnShadow": '0px .5px 0px 0px rgba(0, 0, 0, .15)',
+        "btnDisabledShadow": '0px 1px 1px 0px rgba(0, 0, 0, .05)',
       }
     },
   },
