@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <link rel="stylesheet" href="/dist/output.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>site</title>
+</head>
+<body class="h-screen w-full font-inter">
+
+
+<div class="main-wrapper flex  w-full text-primary min-h-screen ">
+
+  <!--  Sidebar-->
+  <div
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 ">
+
+    <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
+      <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
+           xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+              fill="var(--fill)"></path>
+      </svg>
+    </a>
+
+    <nav class=" flex flex-col mt-6">
+      <ul class="flex flex-col flex-1 ">
+        <li class="sidebar-item font-medium text-primary">
+          <span class="pl-5">Personal settings</span>
+        </li>
+        <li class="item-active">
+          <a class="pl-5">Profile</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Notifications</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Keyboard shortcuts</a>
+        </li>
+
+        <li class="sidebar-item font-medium text-primary mt-6">
+          <a class="pl-5">Product settings</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Attributes</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Automations</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Copilot</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Group mentions</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Import</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="pl-5">Integrations</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Task forms</a>
+        </li>
+
+        <li class="sidebar-item font-medium text-primary mt-6">
+          <a class="pl-5">Workspace settings</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">General</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">API</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Authentication</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Billing</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Security log</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="pl-5">Users</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--  Content part -->
+  <div class="content flex-1 flex flex-col px-8 ">
+
+    <header>
+      <h1 class="title text-primary font-medium flex items-center pt-7 py-3">
+        Profile settings
+      </h1>
+    </header>
+
+    <main>
+
+      <form class="mt-1">
+        <label class="text-secondary block" for="firstname">First name</label>
+        <input class="border border-lightBorder w-[380px] px-2 py-[2px] rounded-lg mt-1 mb-6
+        border focus:outline-2 focus:outline-[#8a8a8a] hover:bg-btnBgHover focus:bg-white" type="text" id="firstname"
+               value="Marina" name="firstname">
+
+        <label class="text-secondary block" for="lastname">Last name</label>
+        <input class="border border-lightBorder w-[380px] px-2 py-[2px] rounded-lg mt-1 mb-6
+        border focus:outline-2 focus:bg-white focus:outline-[#8a8a8a] hover:bg-btnBgHover" type="text" id="lastname"
+               value="I." name="lastname">
+
+        <label class="text-secondary block" for="username">Username</label>
+        <input class="border border-lightBorder w-[380px] px-2 py-[2px] rounded-lg mt-1 mb-6
+        border focus:outline-2 focus:outline-[#8a8a8a] hover:bg-btnBgHover focus:bg-white" type="text" id="username"
+               value="marina" name="username">
+
+        <div class="flex items-start gap-2">
+          <div>
+            <p class="text-secondary block mb-2">Profile picture</p>
+            <label class="avatar-label flex gap-2 items-start" for="avatar">
+
+              <!--  later you can insert into avatar-img  -- avatar that you get from server API -->
+              <span
+                  class="avatar-img  bg-[url('/ava.jpg')] rounded-full h-[120px] w-[120px] bg-cover cursor-pointer"></span>
+
+              <input class="hidden avatar-input" type="file" name="avatar" id="avatar">
+
+              <span role="button"
+                    class="mt-3 border border-lightBorder rounded-lg py-[2px] px-2 hover:bg-btnBgHover shadow-btnShadow">
+                Upload
+              </span>
+            </label>
+          </div>
+          <button type="button"
+                  class="border border-lightBorder rounded-lg py-[2px] px-2 hover:bg-btnBgHover shadow-btnShadow mt-11">
+            Remove
+          </button>
+        </div>
+
+        <div class="inline-block">
+          <button disabled type="submit" class="bg-[#242424] text-[#eaeaea] rounded-lg py-[2px] px-2 font-medium h-7 flex justify-center items-center ml-[350px] mt-2  disabled:bg-white disabled:text-[#cecece] disabled:font-light group
+        disabled:shadow-btnDisabledShadow disabled:border-lightBorder   "
+          >
+            Save <span
+              class="text-[#999999] border border-[#999999] rounded-md px-1 ml-1  text-sm group-disabled:text-lightBorder group-disabled:border-none group-disabled:font-normal">Ctrl+Enter</span>
+          </button>
+
+          <div class="h-[1px] w-full bg-lightBorder mt-10 mb-11"></div>
+        </div>
+      </form>
+
+      <div class="max-w-[580px]">
+        <h2 class="title text-primary font-medium flex items-center py-3 mb-1">
+          Authentication
+        </h2>
+        <p class="text-secondary mb-2">Configure how you log in Height</p>
+
+        <!--  grey rounded block 1 -->
+        <div class="py-3 px-5 bg-lightBorder rounded-[10px] mb-4">
+
+          <div class="flex gap-4 items-center mb-4">
+            <div class="w-[24px] h-[24px] bg-[#2e8cff] flex justify-center items-center rounded-md shrink-0 u">
+              <svg class="w-5 h-5 stroke-none fill-white" stroke="currentColor" viewBox="-2 -2 20 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M.82 4.455A8.007 8.007 0 000 8a7.976 7.976 0 008 8c1.951 0 3.816-.692 5.214-1.992 1.468-1.365 2.422-3.4 2.422-6.008 0-.473-.072-.982-.181-1.455H8v3.091h4.29c-.4 1.964-2.072 3.091-4.29 3.091A4.718 4.718 0 013.273 8 4.718 4.718 0 018 3.273c1.127 0 2.145.4 2.945 1.054L13.273 2C11.855.764 10.036 0 8 0A7.977 7.977 0 00.82 4.455z"
+                    fill="var(--fill)"></path>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="title text-primary font-medium ">
+                Google authentication
+              </h3>
+              <p class="text-secondary">Your Google account is connected and you can now log in with Google</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center mt-4 mb-2">
+            <p class="text-secondary font-medium">nada@gmail.com</p>
+
+            <button class="auth-btn ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                   fill="none">
+                <g clip-path="url(#a)">
+                  <path
+                      d="M.82 11.545l2.69-2.058A4.747 4.747 0 013.273 8c0-.52.083-1.02.237-1.487L.82 4.455A8.007 8.007 0 000 8c0 1.275.294 2.478.82 3.545z"
+                      fill="#FBBC05"/>
+                  <path
+                      d="M3.51 6.513A4.718 4.718 0 018 3.273c1.127 0 2.145.4 2.945 1.054L13.273 2C11.855.764 10.036 0 8 0A7.977 7.977 0 00.82 4.455l2.69 2.058z"
+                      fill="#EA4335"/>
+                  <path
+                      d="M.818 11.543A7.977 7.977 0 008 16c4 0 7.636-2.91 7.636-8 0-.473-.072-.982-.181-1.455H8v3.091h4.29c-.4 1.964-2.072 3.091-4.29 3.091a4.718 4.718 0 01-4.492-3.246l-2.69 2.062z"
+                      fill="#34A853"/>
+                  <path
+                      d="M8 6.545h7.454c.11.473.182.982.182 1.455 0 2.607-.954 4.643-2.422 6.008L10.66 12.03c.835-.527 1.416-1.34 1.63-2.394H8v-3.09z"
+                      fill="#4285F4"/>
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 0h16v16H0z"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="pb-[2px]">Use a different Goggle account</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!--  grey rounded block 2 -->
+        <div class="py-3 px-5 bg-lightBorder rounded-[10px] mb-4">
+          <div class="flex gap-3 items-center justify-between">
+            <div class="flex gap-4 items-center">
+              <div class="w-[24px] h-[24px] bg-secondary flex justify-center items-center rounded-md shrink-0 u">
+                <svg class="w-6 h-6 fill-white " stroke="none" viewBox="-2 -2 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M8.14242 4.27417C8.42361 4.27417 8.8829 4.16481 9.52027 3.9461C10.1576 3.7274 10.7107 3.61804 11.1793 3.61804C11.9479 3.61804 12.6322 3.82425 13.232 4.23667C13.5695 4.47413 13.9038 4.79594 14.235 5.20211C13.7351 5.62703 13.3695 6.00508 13.1383 6.33626C12.7196 6.93615 12.5103 7.59852 12.5103 8.32337C12.5103 9.11697 12.7321 9.83245 13.1758 10.4698C13.6195 11.1072 14.1256 11.5103 14.6943 11.679C14.4568 12.4476 14.0631 13.2505 13.5132 14.0879C12.6822 15.3439 11.8573 15.9719 11.0387 15.9719C10.7138 15.9719 10.2639 15.8688 9.68899 15.6626C9.12035 15.4564 8.63919 15.3533 8.24552 15.3533C7.85185 15.3533 7.39256 15.4595 6.86767 15.6719C6.34902 15.8906 5.92722 16 5.60229 16C4.62123 16 3.65892 15.1689 2.71535 13.5067C1.77179 11.8633 1.3 10.2511 1.3 8.67018C1.3 7.20172 1.65931 6.00508 2.37792 5.08026C3.10278 4.15544 4.0151 3.69303 5.11488 3.69303C5.58354 3.69303 6.14906 3.78988 6.81143 3.9836C7.48005 4.17731 7.92371 4.27417 8.14242 4.27417ZM11.0762 0.403046C11.0762 0.802968 10.9825 1.24038 10.795 1.71529C10.6076 2.1902 10.3107 2.63074 9.90457 3.03691C9.55464 3.38059 9.20783 3.61179 8.86415 3.73052C8.64544 3.79926 8.31426 3.85237 7.87059 3.88987C7.88309 2.94005 8.12992 2.11834 8.61108 1.42472C9.09848 0.731107 9.90145 0.2562 11.02 0C11.045 0.0812341 11.0606 0.153095 11.0668 0.215583C11.0731 0.278071 11.0762 0.340558 11.0762 0.403046Z"
+                      fill="var(--fill)"></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="title text-primary font-medium ">
+                  Apple authentication
+                </h3>
+                <p class="text-secondary">Connect your Apple account in to Height</p>
+              </div>
+            </div>
+            <button class="auth-btn ">
+              <svg class="w-5 h-5 " stroke="currentColor" viewBox="-2 -2 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.14242 4.27417C8.42361 4.27417 8.8829 4.16481 9.52027 3.9461C10.1576 3.7274 10.7107 3.61804 11.1793 3.61804C11.9479 3.61804 12.6322 3.82425 13.232 4.23667C13.5695 4.47413 13.9038 4.79594 14.235 5.20211C13.7351 5.62703 13.3695 6.00508 13.1383 6.33626C12.7196 6.93615 12.5103 7.59852 12.5103 8.32337C12.5103 9.11697 12.7321 9.83245 13.1758 10.4698C13.6195 11.1072 14.1256 11.5103 14.6943 11.679C14.4568 12.4476 14.0631 13.2505 13.5132 14.0879C12.6822 15.3439 11.8573 15.9719 11.0387 15.9719C10.7138 15.9719 10.2639 15.8688 9.68899 15.6626C9.12035 15.4564 8.63919 15.3533 8.24552 15.3533C7.85185 15.3533 7.39256 15.4595 6.86767 15.6719C6.34902 15.8906 5.92722 16 5.60229 16C4.62123 16 3.65892 15.1689 2.71535 13.5067C1.77179 11.8633 1.3 10.2511 1.3 8.67018C1.3 7.20172 1.65931 6.00508 2.37792 5.08026C3.10278 4.15544 4.0151 3.69303 5.11488 3.69303C5.58354 3.69303 6.14906 3.78988 6.81143 3.9836C7.48005 4.17731 7.92371 4.27417 8.14242 4.27417ZM11.0762 0.403046C11.0762 0.802968 10.9825 1.24038 10.795 1.71529C10.6076 2.1902 10.3107 2.63074 9.90457 3.03691C9.55464 3.38059 9.20783 3.61179 8.86415 3.73052C8.64544 3.79926 8.31426 3.85237 7.87059 3.88987C7.88309 2.94005 8.12992 2.11834 8.61108 1.42472C9.09848 0.731107 9.90145 0.2562 11.02 0C11.045 0.0812341 11.0606 0.153095 11.0668 0.215583C11.0731 0.278071 11.0762 0.340558 11.0762 0.403046Z"
+                    fill="var(--fill)"></path>
+              </svg>
+              <span class="pb-[2px]">Sign in with Apple</span>
+            </button>
+          </div>
+        </div>
+
+        <!--  grey rounded block 3 -->
+        <div class="py-3 px-5 bg-lightBorder rounded-[10px] mb-[52px]">
+          <div class="flex gap-3 items-center justify-between">
+            <div class="flex gap-4 items-center">
+              <div class="w-[24px] h-[24px] bg-primary flex justify-center items-center rounded-md shrink-0 u">
+                <svg class="w-6 h-6 fill-white" stroke="none" viewBox="-2 -2 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M8.35349 15.0576C9.72246 15.0576 11.1766 14.7114 11.8425 14.3651L11.3897 13.0122C10.8837 13.2039 9.65854 13.5555 8.44405 13.5555C4.91777 13.5555 3.01081 11.6485 3.01081 8.19681C3.01081 4.97948 4.83254 2.73693 8.31088 2.73693C11.15 2.73693 13.2647 4.3456 13.2594 7.37117C13.2647 9.5711 12.9238 10.5619 12.0715 10.5619C11.6188 10.5619 11.3524 10.1997 11.3471 9.67231V4.60128H9.86095V5.19787H9.78638C9.61592 4.72912 8.5932 4.29766 7.4373 4.45746C5.95115 4.65455 4.52359 5.87436 4.52359 8.1542C4.52359 10.5033 5.802 11.8829 7.53851 11.9628C8.74767 12.0214 9.68517 11.4834 9.93553 10.8495H9.99945C10.1273 11.6485 10.8304 12.0853 11.9064 12.0267C14.1969 11.9415 14.8521 9.89603 14.8467 7.46172C14.8521 3.96207 12.4977 1.2561 8.34817 1.2561C3.927 1.2561 1.3542 3.97805 1.34888 8.21812C1.3542 12.5594 3.88439 15.0576 8.35349 15.0576ZM7.98062 10.434C6.59035 10.434 6.1216 9.30477 6.11628 8.09028C6.1216 6.87579 6.7981 5.98622 7.99128 5.98622C9.31763 5.98622 9.80769 6.63608 9.81301 8.08495C9.82899 9.64035 9.32828 10.434 7.98062 10.434Z"
+                      fill="var(--fill)"></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="title text-primary font-medium ">
+                  Apple authentication
+                </h3>
+                <p class="text-secondary">Connect your Apple account in to Height</p>
+              </div>
+            </div>
+            <button class="auth-btn ">
+              <svg class="w-[16px] h-[16px] shrink-0 fill-secondary rotate-180 " stroke="none" viewBox="0 0 16 16"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                      fill="var(--fill)"></path>
+              </svg>
+              <span class="pb-[2px]">Set password</span>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+
+
+  </div>
+</div>
+
+
+<script src="js/profile.js"></script>
+</body>
+</html>
