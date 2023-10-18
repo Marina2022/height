@@ -45,7 +45,9 @@
   width: calc(100vw - 220px)
 }
 
-
+.screen-width-table {
+  width: calc(100vw - 220px - 12px)
+}
 
 @layer base {
   .item-active > svg {

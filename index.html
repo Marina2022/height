@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>site</title>
 </head>
-<body class="h-screen w-full font-inter ">
+<body class="h-screen w-full font-inter">
 <div class="main-wrapper flex h-screen w-full text-primary">
 
   <!--  Sidebar-->
@@ -244,7 +244,8 @@
   </div>
 
   <!--  Content part -->
-  <div class="content flex-1 h-screen flex flex-col w-full">
+  <div class="content flex-1  flex flex-col overflow-hidden">
+<!--    screen-width-minus-sidebar-->
     <header>
       <div class="header-wrapper flex py-3 px-8 screen-width-minus-sidebar">
         <div class="title text-primary font-medium flex items-center">
@@ -280,6 +281,8 @@
       </div>
     </header>
 
+
+    <!--    filter-->
     <div class="px-[32px] screen-width-minus-sidebar">
       <div
           class="filter-block p-1 rounded-lg border border-borderLightGrey flex justify-between hidden">
@@ -321,9 +324,9 @@
       </div>
     </div>
 
-    <div class="mt-4 pl-2 pr-1 flex-1 h-screen w-full">
+    <div class="mt-4 pl-2 pr-1 flex-1 overflow-x-auto overflow-y-hidden">
 
-      <div class="flex-col flex">
+      <div class="flex-col flex h-screen screen-width-table">
 
         <!--        table header-->
 
@@ -395,7 +398,7 @@
         <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
 
         <!--      table rows-->
-        <div class="overflow-auto h-full w-full min-w-[1532px] ">
+        <div class="overflow-auto h-screen min-w-[1532px] ">
 
           <!--        row   -->
           <div class="pr-[18px]">
@@ -1330,6 +1333,7 @@
             </div>
           </div>
 
+
           <!--      divider-->
           <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
           <button
@@ -1341,17 +1345,10 @@
                   stroke="var(--fill)" stroke-width="1.25"></path>
             </svg>
             <span>New task</span>
-
-
           </button>
-
-
-          <p class="w-[34px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid debitis deleniti dicta dolorum eaque molestiae tenetur unde. Expedita placeat praesentium quos? Ab facere id iure laudantium nulla soluta voluptas. A alias at aut autem cum dicta et exercitationem incidunt ipsa necessitatibus neque porro qui quidem, sapiente tempore vero, voluptas, voluptatem voluptatum? A aliquam, ducimus iste natus numquam odio. At eos exercitationem minus nobis voluptas. A atque beatae, consequuntur ea eveniet ex nihil nulla omnis perferendis perspiciatis quasi quisquam, repellendus saepe sapiente vel voluptate, voluptatum? Assumenda error ex illo, impedit molestias possimus quae recusandae sed ullam veniam. Ab cupiditate nihil recusandae sapiente tenetur? Doloremque laudantium quos repudiandae similique vel. Accusamus asperiores atque aut, commodi delectus dolores id iusto laborum molestias nihil nostrum optio perferendis qui quia quibusdam quod rem suscipit! Expedita optio porro sequi voluptas! Accusamus atque inventore ipsam nulla optio possimus provident quibusdam, quod suscipit ut? Accusamus, adipisci ducimus ea, enim error incidunt iure natus obcaecati omnis quos ratione rerum, saepe voluptatem. Animi assumenda beatae culpa debitis deserunt dolores ducimus error eum exercitationem illum impedit iure labore maiores necessitatibus neque obcaecati odit, omnis perspiciatis quibusdam recusandae sunt tempora voluptas voluptates! Consequatur, eum ipsum necessitatibus nostrum odit possimus quae quia tempore?</p>
-
         </div>
-
-
       </div>
+
 
 
     </div>
