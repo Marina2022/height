@@ -23,6 +23,7 @@ export default {
         tableCellsBgHover: '#dcdedf',
         tableRowHover: '#fcfcfc',
         commentText: '#9ba5ab',
+        ctrlBtn: '#9d9d9d'
 
       },
       boxShadow: {

@@ -48,7 +48,6 @@ passwordBackBtn.addEventListener('click', ()=>{
   mainForm.classList.toggle('hidden')
 })
 
-
 codBackBtn.addEventListener('click', ()=>{
   passwordForm.classList.toggle('hidden')
   codeForm.classList.toggle('hidden')
