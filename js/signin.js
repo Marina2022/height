@@ -1,5 +1,3 @@
-// import IMask from "imask";
-
 const SSOBtn = document.querySelector('.SSO-btn')
 const SSOBackBtn = document.querySelector('.SSO-back-btn')
 const loginAnotherWay = document.querySelector('.login-another-way')
@@ -21,7 +19,7 @@ const changePassBackBtn = document.querySelector('.change-pass-back-btn')
 const confirmBtn = document.querySelector('.confirm-btn')
 const successModal = document.querySelector('.success-modal')
 const successBackBtn = document.querySelector('.success-back-btn')
-
+const loginNextBtn = document.querySelector('.login-next-btn')
 
 SSOBtn.addEventListener('click', ()=>{
   SSOForm.classList.toggle('hidden')
@@ -98,3 +96,10 @@ successBackBtn.addEventListener('click', ()=>{
   successModal.classList.toggle('hidden')
 })
 
+
+
+loginNextBtn.addEventListener('click', (e)=>{
+  e.preventDefault()
+  passwordForm.classList.toggle('hidden')
+  codeForm.classList.toggle('hidden')
+})

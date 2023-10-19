@@ -11,14 +11,9 @@ const passwordForm = document.querySelector('.password-form')
 const passwordBackBtn = document.querySelector('.password-back-btn')
 const codBackBtn = document.querySelector('.code-back-btn')
 const codeForm = document.querySelector('.code-form')
-const lostPassBtn = document.querySelector('.lost-pass-btn')
 
-const nextBtn = document.querySelector('.next-btn')
-const changePasswordForm = document.querySelector('.change-password-form')
-const changePassBackBtn = document.querySelector('.change-pass-back-btn')
-const confirmBtn = document.querySelector('.confirm-btn')
-const successModal = document.querySelector('.success-modal')
-const successBackBtn = document.querySelector('.success-back-btn')
+
+const loginNextBtn = document.querySelector('.login-next-btn')
 
 
 SSOBtn.addEventListener('click', ()=>{
@@ -53,13 +48,14 @@ passwordBackBtn.addEventListener('click', ()=>{
   mainForm.classList.toggle('hidden')
 })
 
-lostPassBtn.addEventListener('click', (e)=>{
-  e.preventDefault()
-  codeForm.classList.toggle('hidden')
-  passwordForm.classList.toggle('hidden')
-})
 
 codBackBtn.addEventListener('click', ()=>{
+  passwordForm.classList.toggle('hidden')
+  codeForm.classList.toggle('hidden')
+})
+
+loginNextBtn.addEventListener('click', (e)=>{
+  e.preventDefault()
   passwordForm.classList.toggle('hidden')
   codeForm.classList.toggle('hidden')
 })
@@ -73,26 +69,5 @@ const maskOptions = {
 const mask = IMask(codeInput, maskOptions);
 
 
-nextBtn.addEventListener('click', (e)=>{
-  e.preventDefault()
-  codeForm.classList.toggle('hidden')
-  changePasswordForm.classList.toggle('hidden')
-})
 
-
-changePassBackBtn.addEventListener('click', ()=>{
-  codeForm.classList.toggle('hidden')
-  changePasswordForm.classList.toggle('hidden')
-})
-
-confirmBtn.addEventListener('click', (e)=>{
-  e.preventDefault()
-  changePasswordForm.classList.toggle('hidden')
-  successModal.classList.toggle('hidden')
-})
-
-successBackBtn.addEventListener('click', ()=>{
-  changePasswordForm.classList.toggle('hidden')
-  successModal.classList.toggle('hidden')
-})
 
