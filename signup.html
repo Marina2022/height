@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <link rel="stylesheet" href="/dist/output.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+  />
+  <script src="https://unpkg.com/imask"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>site</title>
+</head>
+<body class="h-screen w-full">
+<div class="absolute inset-0 h-full w-full p-10"></div>
+
+
+<!--initial log in form-->
+<div
+    class="main-form inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="flex flex-col items-center py-8">
+        <img src="icon-logo.svg" width="48" height="48" alt="logo"/>
+        <h2 class="mb-[10px] mt-3 text-[24px] font-semibold leading-6">
+          Welcome to Height
+        </h2>
+        <p class="text-secondary text-[14px] leading-[14px]">
+          Task management tool for teams
+        </p>
+      </header>
+      <div class="bg-grey px-10 py-8">
+        <button class="reg-btn before:bg-[url('icon-google.svg')]">
+          Continue with Google
+        </button>
+        <button
+            class="reg-btn mt-1 before:!h-[18px] before:bg-[url('apple.svg')]"
+        >
+          Continue with Apple
+        </button>
+
+
+        <form>
+          <label class="mt-5 block text-[14px] font-medium" for="email2"
+          >Email</label
+          >
+          <input
+              class="border-borderGrey mb-1 mt-2 h-[34px] w-full rounded-[8px] border bg-white px-3 text-[14px] focus:outline-none focus:shadow-inputShadow"
+              placeholder="Enter your email address..."
+              id="email2" name="email"
+          />
+
+          <button
+              class="continue-with-email bg-btnBlack mb-3 min-h-[34px] w-full cursor-pointer rounded-[8px] text-[14px] font-medium text-white"
+          >
+            Continue with email
+          </button>
+        </form>
+
+        <div class="text-center">
+          <button
+              class="SSO-btn text-greyBtn hover:text-greyBtnHover hover:bg-greyBtnHoverBg mx-auto h-7 rounded-[8px] px-2 text-[14px] font-medium leading-7">
+            or continue with SAML SSO
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-secondary mt-5 w-[340px] text-center text-[12px] leading-[18px]">
+      <p>
+        By clicking “Sign in” or “Continue” above, you acknowledge that you have read and understood, and agree to
+        Height’s
+      </p>
+      <a class="rounded-[4px] px-1 pb-1 mt-1 font-medium leading-5 transition-colors hover:bg-[#f3f3f3]" href="#">Terms
+        and Privacy</a>
+    </div>
+  </div>
+</div>
+
+<!--continue with SSO form-->
+<div
+    class="hidden SSO-form inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="bg-grey flex items-center py-4 px-5 relative justify-center">
+        <button class="absolute left-[10px] SSO-back-btn hover:bg-greyBtnHoverBg p-2 rounded-full">
+          <svg class="w-[16px] h-[16px] shrink-0 fill-secondary " stroke="none" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+        <span class="">Continue with SSO</span>
+      </header>
+      <div class="bg-white px-10 py-8">
+        <p class="mb-3">
+          This workspace isn't set up for SSO. Please log in with Google, Apple, or a password instead
+        </p>
+
+        <button
+            class="login-another-way bg-btnBlack mb-3 min-h-[34px] w-full cursor-pointer rounded-[8px] text-[14px] font-medium text-white"
+        >
+          Log in another way
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--SSO email form-->
+<div
+    class="hidden SSO-email-form inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="bg-grey flex items-center py-4 px-5 relative justify-center">
+
+        <button class="SSO-email-back-btn hover:bg-greyBtnHoverBg p-2 rounded-full absolute left-[10px]">
+          <svg class="w-[16px] h-[16px] shrink-0 fill-secondary " stroke="none" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+        <span>Continue with SSO</span>
+      </header>
+      <div class="bg-white px-10 py-8">
+
+        <form>
+          <label class="mt-3 block text-[14px] font-medium" for="email"
+          >Email</label
+          >
+          <input
+              class="border-borderGrey mb-2 mt-2 h-[34px] w-full rounded-[8px] border bg-white px-3 text-[14px] focus:outline-none focus:shadow-inputShadow"
+              placeholder="Enter your email address..."
+              id="email" name="email"
+          />
+
+          <button
+              class="login-another-way bg-btnBlack mb-3 min-h-[34px] w-full cursor-pointer rounded-[8px] text-[14px] font-medium text-white"
+          >
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--password form-->
+
+<div
+    class="hidden password-form inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="relative bg-grey flex items-center py-4 justify-center px-5">
+        <button class="password-back-btn absolute left-[10px]  hover:bg-greyBtnHoverBg p-2 rounded-full">
+          <svg class="w-[16px] h-[16px] shrink-0 fill-secondary " stroke="none" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+        <div class="text-center">Log in</div>
+      </header>
+      <div class="bg-white px-10 py-8">
+
+        <form>
+          <label class="mt-3 block text-[14px] font-medium" for="email1"
+          >Email</label
+          >
+          <input
+              class="border-borderGrey mb-5 mt-2 h-[34px] w-full rounded-[8px] border bg-white px-3 text-[14px] focus:outline-none focus:shadow-inputShadow"
+              placeholder="Enter your email address..."
+              id="email1" name="email"
+          />
+
+          <div class="flex justify-between items-center">
+          <label class="block text-[14px] font-medium" for="pass"
+          >Password</label
+          >
+            <button class="lost-pass-btn cursor-pointer">Lost password?</button>
+          </div>
+          <input type="password"
+              class="border-borderGrey mb-5 mt-2 h-[34px] w-full rounded-[8px] border bg-white px-3 text-[14px] focus:outline-none focus:shadow-inputShadow"
+              placeholder=""
+              id="pass" name="email"
+          />
+
+          <button
+              class="login-another-way bg-btnBlack mb-1 min-h-[34px] w-full cursor-pointer rounded-[8px] text-[14px] font-medium text-white"
+          >
+            Log in
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--code form-->
+
+<div
+    class="hidden code-form inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="relative bg-grey flex items-center py-4 justify-center px-5">
+        <button class="code-back-btn absolute left-[10px]  hover:bg-greyBtnHoverBg p-2 rounded-full">
+          <svg class="w-[16px] h-[16px] shrink-0 fill-secondary " stroke="none" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+        <div class="text-center">Lost password</div>
+      </header>
+      <div class="bg-white px-10 py-8">
+
+        <p>
+          Please enter the unique code we sent to ddd@gmail.com.
+        </p>
+
+        <form>
+          <label class="mt-3 block text-[14px] font-medium" for="code"
+          >Code</label
+          >
+          <input
+              class="code-input border-borderGrey mb-5 mt-2 h-[34px] w-full rounded-[8px] border bg-white px-3 text-[14px] focus:outline-none focus:shadow-inputShadow"
+              id="code" placeholder="000-000 "
+          />
+
+          <button
+              class="next-btn bg-btnBlack mb-1 min-h-[34px] w-full cursor-pointer rounded-[8px] text-[14px] font-medium text-white"
+          >
+            Next
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--change password form-->
+
+<div
+    class="hidden change-password-form inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="relative bg-grey flex items-center py-4 justify-center px-5">
+        <button class="change-pass-back-btn absolute left-[10px]  hover:bg-greyBtnHoverBg p-2 rounded-full">
+          <svg class="w-[16px] h-[16px] shrink-0 fill-secondary " stroke="none" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+        <div class="text-center">change password</div>
+      </header>
+      <div class="bg-white px-10 py-8">
+
+        <p>
+          Great! Please choose your new password (8 characters minimum).
+        </p>
+
+        <form>
+          <label class="mt-3 block text-[14px] font-medium" for="pass3"
+          >Password</label
+          >
+          <input
+              class="border-borderGrey mb-5 mt-2 h-[34px] w-full rounded-[8px] border bg-white px-3 text-[14px] focus:outline-none focus:shadow-inputShadow"
+              id="pass3" type="password"
+          />
+
+          <button
+              class="confirm-btn bg-btnBlack mb-1 min-h-[34px] w-full cursor-pointer rounded-[8px] text-[14px] font-medium text-white"
+          >
+            Confirm
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Success modal-->
+
+<div
+    class="hidden success-modal inset absolute grid h-screen w-full grid-cols-[1fr_auto_1fr] grid-rows-[2fr_auto_3fr] bg-white/75">
+  <div class="font-inter text-primary col-start-2 row-start-2 tracking-[.000001px]">
+    <div class="shadow-largeShadow border-borderGrey w-[340px] overflow-hidden rounded-[12px] border bg-white">
+      <header class="relative bg-grey flex items-center py-4 justify-center px-5">
+        <button class="success-back-btn absolute left-[10px]  hover:bg-greyBtnHoverBg p-2 rounded-full">
+          <svg class="w-[16px] h-[16px] shrink-0 fill-secondary " stroke="none" viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+                  fill="var(--fill)"></path>
+          </svg>
+        </button>
+        <div class="text-center">Success</div>
+      </header>
+      <div class="bg-white px-10 py-8">
+        <p>
+          Your password has been updated. Sighing you in...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/signin.js" type="module"></script>
+</body>
+</html>
