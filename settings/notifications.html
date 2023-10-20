@@ -19,7 +19,7 @@
 
   <!--  Sidebar-->
   <div
-      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 ">
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen">
 
     <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
       <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
@@ -35,7 +35,7 @@
         <li class="sidebar-item font-medium text-primary">
           <span class="pl-5">Personal settings</span>
         </li>
-        <li class="item-active">
+        <li class="sidebar-item">
           <a href="profile.html" class="pl-5">Profile</a>
         </li>
 
@@ -43,7 +43,7 @@
           <a href="preferences.html" class="pl-5">Preferences</a>
         </li>
 
-        <li class="sidebar-item">
+        <li class="item-active">
           <a href="notifications.html" class="pl-5">Notifications</a>
         </li>
 
@@ -104,15 +104,121 @@
   </div>
 
   <!--  Content part -->
-  <div class="content flex-1 flex flex-col px-8 ">
+  <div class="content flex-1 flex flex-col px-8 overflow-auto h-screen">
 
     <header>
       <h1 class="title text-primary font-medium flex items-center pt-7 py-3">
-        Profile settings
+        Notify me about…
       </h1>
     </header>
 
     <main>
+
+
+      <!--      radio block 1 + grey-rounded-label -->
+
+      <div class="w-[340px] text-primary font-medium mb-5">
+        <input class="radio-pref hidden" type="radio" id="radio1" name="notify" checked>
+        <label class="grey-rounded-label radio-pref-label mb-3 bg-tableCellsBg p-4 block rounded-lg w-[580px] hover:bg-greyBtnHoverBg" for="radio1">
+          <span class="flex items-center gap-3 ">
+          <span class="radio-span block w-[14px] h-[14px] rounded-full border shrink-0 items-start"></span>
+            <span>Recommended settings</span>
+        </span>
+          <span
+              class=" text-secondary mb-6 pl-7">New messages, tasks assigned to me, and completed tasks</span>
+        </label>
+
+        <input class="radio-pref hidden" type="radio" id="radio2" name="notify">
+        <label class="grey-rounded-label radio-pref-label  mb-2 bg-tableCellsBg p-4 block rounded-lg w-[580px] hover:bg-greyBtnHoverBg" for="radio2">
+          <span class="flex items-center gap-3 ">
+          <span class="radio-span block w-[14px] h-[14px] rounded-full border shrink-0 items-start"></span>
+            <span>Custom settings</span>
+        </span>
+        </label>
+      </div>
+
+      <h2 class="title text-primary font-medium flex items-center pt-7 py-4">
+        Desktop notifications
+      </h2>
+
+      <!--  info block -->
+      <div class="flex border border-lightBorder rounded-xl overflow-hidden w-[580px] pr-1">
+        <div class="bg-tableCellsBg px-2 py-7 border-borderGrey border rounded-l-xl border-r-0 flex items-center">
+          <svg class="w-5 h-5 " stroke="secondary"  viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.21 3.565c0 .37-.132.69-.397.96s-.588.405-.968.405c-.37 0-.69-.135-.96-.405s-.405-.59-.405-.96.135-.69.405-.96.59-.405.96-.405c.38 0 .703.135.968.405s.397.59.397.96zm-1.155 7.74c0 .16-.377.535-1.132 1.125-.755.59-1.438.885-2.048.885-.42 0-.725-.107-.915-.322a1.07 1.07 0 01-.285-.728c0-.17.025-.328.075-.473.05-.144.105-.292.165-.442L7.34 8.395c.08-.17.138-.307.173-.412a.893.893 0 00.052-.278c0-.08-.015-.138-.045-.173a.15.15 0 00-.12-.052c-.13 0-.382.197-.757.592-.375.396-.598.593-.668.593-.08 0-.16-.055-.24-.165-.08-.11-.12-.18-.12-.21 0-.1.095-.262.285-.487.19-.226.43-.463.72-.713.26-.23.573-.445.938-.645s.687-.3.967-.3c.45 0 .788.128 1.013.383.225.255.337.562.337.922 0 .15-.015.31-.045.48a1.69 1.69 0 01-.195.525l-1.14 2.505c-.09.21-.155.38-.195.51-.04.13-.06.22-.06.27 0 .06.015.098.045.112a.2.2 0 00.09.023c.22 0 .478-.158.773-.473.295-.314.482-.472.562-.472.07 0 .145.053.225.158.08.105.12.177.12.217z" fill="var(--fill)"></path>
+          </svg>
+        </div>
+        <div class="ml-4 text-secondary py-3">
+          <p class="font-medium">Notifications are currently blocked by your browser</p>
+          <p>Please go to your browser settings to allow notifications for Height.</p>
+        </div>
+      </div>
+
+
+      <h2 class="title text-primary font-medium flex items-center mt-9 mb-6">
+        Email notifications
+      </h2>
+
+      <!--  radio block 2 -->
+
+      <div class="w-[580px] text-primary  mt-6">
+        <input class="radio-pref hidden" type="radio" id="radio3" name="task-layout">
+        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio3">
+          <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+          All new messages and statuses
+        </label>
+        <input class="radio-pref hidden" type="radio" id="radio4" name="task-layout">
+        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio4">
+          <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+          Unread messages and statuses (Recommended)
+        </label>
+        <input class="radio-pref hidden" type="radio" id="radio5" name="task-layout" checked>
+        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio5">
+          <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+          Disabled
+        </label>
+      </div>
+
+
+      <h2 class="title text-primary font-medium flex items-center mt-9 mb-6">
+        Subscriptions
+      </h2>
+      <!--      check block 1 -->
+
+        <div class="w-[340px] text-primary mb-7">
+          <input class="check-pref hidden" type="checkbox" id="check1" checked>
+          <label class="check-pref-label flex items-center gap-3 mb-2" for="check1">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+            Automatically subscribe to tasks you create
+          </label>
+         </div>
+
+
+      <!--  info block -->
+      <div class="flex border border-lightBorder rounded-xl overflow-hidden w-[580px] pr-1">
+        <div class="bg-tableCellsBg px-2 py-7 border-borderGrey border rounded-l-xl border-r-0 flex items-center">
+          <svg class="w-5 h-5 " stroke="secondary"  viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.21 3.565c0 .37-.132.69-.397.96s-.588.405-.968.405c-.37 0-.69-.135-.96-.405s-.405-.59-.405-.96.135-.69.405-.96.59-.405.96-.405c.38 0 .703.135.968.405s.397.59.397.96zm-1.155 7.74c0 .16-.377.535-1.132 1.125-.755.59-1.438.885-2.048.885-.42 0-.725-.107-.915-.322a1.07 1.07 0 01-.285-.728c0-.17.025-.328.075-.473.05-.144.105-.292.165-.442L7.34 8.395c.08-.17.138-.307.173-.412a.893.893 0 00.052-.278c0-.08-.015-.138-.045-.173a.15.15 0 00-.12-.052c-.13 0-.382.197-.757.592-.375.396-.598.593-.668.593-.08 0-.16-.055-.24-.165-.08-.11-.12-.18-.12-.21 0-.1.095-.262.285-.487.19-.226.43-.463.72-.713.26-.23.573-.445.938-.645s.687-.3.967-.3c.45 0 .788.128 1.013.383.225.255.337.562.337.922 0 .15-.015.31-.045.48a1.69 1.69 0 01-.195.525l-1.14 2.505c-.09.21-.155.38-.195.51-.04.13-.06.22-.06.27 0 .06.015.098.045.112a.2.2 0 00.09.023c.22 0 .478-.158.773-.473.295-.314.482-.472.562-.472.07 0 .145.053.225.158.08.105.12.177.12.217z" fill="var(--fill)"></path>
+          </svg>
+        </div>
+        <div class="ml-4 text-secondary py-3">
+          <p class="font-medium">You are also subscribed to a task when…</p>
+          <p class="mb-2">You comment on the task, someone mentions you, or someone assigns the task to you.</p>
+
+          <p class="font-medium">You can unsubscribe…</p>
+          <p>Through the task itself or click the unsubscribe link in an email.</p>
+        </div>
+      </div>
+
+
+
+
 
     </main>
   </div>

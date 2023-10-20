@@ -15,7 +15,7 @@
 <body class="h-screen w-full font-inter">
 
 
-<div class="main-wrapper flex  w-full text-primary min-h-screen ">
+<div class="main-wrapper flex w-full text-primary min-h-screen ">
 
   <!--  Sidebar-->
   <div
@@ -47,7 +47,7 @@
           <a href="notifications.html" class="pl-5">Notifications</a>
         </li>
 
-        <li class="item-active">
+        <li class="sidebar-item">
           <a href="shortcuts.html" class="pl-5">Keyboard shortcuts</a>
         </li>
 
@@ -55,7 +55,7 @@
           <span class="pl-5">Product settings</span>
         </li>
 
-        <li class="sidebar-item">
+        <li class="item-active">
           <a href="attributes.html" class="pl-5">Attributes</a>
         </li>
         <li class="sidebar-item">
@@ -104,78 +104,55 @@
   </div>
 
   <!--  Content part -->
-  <div class="content flex-1 flex flex-col px-2 overflow-auto h-screen">
+  <div class="content flex-1 flex overflow-auto h-screen ">
 
-    <header>
-      <h1 class="title text-primary font-medium flex items-center pt-7 pb-3 pl-6">
-        Keyboard shortcuts
-      </h1>
-    </header>
+    <!--  inner sidebar-->
+    <div
+        class="sidebar w-[300px] bg-white border-r-[1px]  pt-7 text-sm text-secondary  shrink-0 px-2 h-screen flex flex-col">
 
-    <main>
-
-      <p class="pl-6 text-secondary">Add or edit custom keyboard shortcuts of any command in Height.</p>
-
-      <div >
-
-        <div class="pl-6 flex justify-between items-center w-[600px] ">
-
-          <div class="relative text-secondary mt-1 mb-2">
-            <svg class="absolute w-5 h-5 top-[12px] left-[6px]" fill="none" stroke-width="2" viewBox="0 0 16 16"
-                 aria-hidden="true" height="1em"
-                 width="1em"
-                 xmlns="http://www.w3.org/2000/svg">
-              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+      <nav class=" flex flex-col mt-2">
+        <ul class="flex flex-col flex-1 ">
+          <li class="font-medium text-primary mb-5 flex justify-between">
+            <span class="pl-5">Group mentions</span>
+            <button class="hover:bg-greyBtnHoverBg rounded-full p-1 flex items-center justify-center mr-6">
+              <svg class="w-[16px] h-[16px] ml-auto " stroke="currentColor" fill="currentColor" stroke-width="0"
+                   viewBox="0 0 16 16"
                    xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M9.563 4.008a3.625 3.625 0 11-5.126 5.126 3.625 3.625 0 015.126-5.126zm1.135 6.111a5.125 5.125 0 10-1.315.99.815.815 0 00.042.049l3.008 3.225a.82.82 0 101.199-1.118l-2.934-3.146z"
+                      d="M8.5 3.75a.75.75 0 00-1.5 0V7H3.75a.75.75 0 000 1.5H7v3.25a.75.75 0 001.5 0V8.5h3.25a.75.75 0 000-1.5H8.5V3.75z"
                 ></path>
               </svg>
-            </svg>
-            <input
-                class="search-input text-primary pl-8 border-borderGrey mt-2 h-[28px] w-[290px] rounded-[8px] border bg-white px-3 pb-1 text-[14px] focus:outline-none focus:shadow-inputShadow"
-                id="code" placeholder="Search..."
-            />
-          </div>
+            </button>
+          </li>
+          <li class="pl-6">
+            No groups yet
+          </li>
 
-          <div class="flex items-center gap-3">
-            <div>
-              <input class="switch-rainbow hidden" type="checkbox" id="check">
-              <label class="switch-rainbow-label flex items-center gap-3" for="check">
-                <span class="switch-rainbow-span bg-greyBtnHoverBg flex items-center h-[15x] w-[26px] rounded-full p-[1px] border">
-                  <span class="bg-white h-[11px] w-[11px] rounded-full"> </span>
-                </span>
-                Show only custom shortcuts
-              </label>
-            </div>
-          </div>
+        </ul>
+      </nav>
+
+      <button class="btn-with-shadow shrink-0 mt-auto mb-2 mx-6 !text-[14px] w-[164px]">New group</button>
+    </div>
+
+    <!--    content-->
+
+    <div class="content pt-[30px] px-8 flex-1 flex-col flex flex-col justify-center ">
+
+      <!--  info block -->
+      <div class="flex border border-lightBorder rounded-xl overflow-hidden max-w-[580px] pr-1 ml-10">
+        <div class="bg-tableCellsBg px-2 py-7 border-borderGrey border rounded-l-xl border-r-0 flex items-center">
+          <svg class="w-5 h-5 " stroke="secondary"  viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.21 3.565c0 .37-.132.69-.397.96s-.588.405-.968.405c-.37 0-.69-.135-.96-.405s-.405-.59-.405-.96.135-.69.405-.96.59-.405.96-.405c.38 0 .703.135.968.405s.397.59.397.96zm-1.155 7.74c0 .16-.377.535-1.132 1.125-.755.59-1.438.885-2.048.885-.42 0-.725-.107-.915-.322a1.07 1.07 0 01-.285-.728c0-.17.025-.328.075-.473.05-.144.105-.292.165-.442L7.34 8.395c.08-.17.138-.307.173-.412a.893.893 0 00.052-.278c0-.08-.015-.138-.045-.173a.15.15 0 00-.12-.052c-.13 0-.382.197-.757.592-.375.396-.598.593-.668.593-.08 0-.16-.055-.24-.165-.08-.11-.12-.18-.12-.21 0-.1.095-.262.285-.487.19-.226.43-.463.72-.713.26-.23.573-.445.938-.645s.687-.3.967-.3c.45 0 .788.128 1.013.383.225.255.337.562.337.922 0 .15-.015.31-.045.48a1.69 1.69 0 01-.195.525l-1.14 2.505c-.09.21-.155.38-.195.51-.04.13-.06.22-.06.27 0 .06.015.098.045.112a.2.2 0 00.09.023c.22 0 .478-.158.773-.473.295-.314.482-.472.562-.472.07 0 .145.053.225.158.08.105.12.177.12.217z" fill="var(--fill)"></path>
+          </svg>
         </div>
-
-        <div class="rows overflow-auto h-screen w-[620px] ">
-
-          <div class="divider bg-lightBorder h-[1px] w-[580px] ml-6"></div>
-          <div class="flex items-center rounded-lg hover:bg-tableCellsBg pl-6 static-row h-[32px] group">
-
-            <svg class="h-[16px] w-[16px] mr-2" stroke="currentColor" fill="currentColor" stroke-width="0"
-                 viewBox="0 0 16 16"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M3.5 10a1 1 0 01-1-1V4A1.5 1.5 0 014 2.5h8A1.5 1.5 0 0113.5 4v5a1 1 0 01-1 1h-2a2.5 2.5 0 01-5 0h-2zm8.5 5H4a3 3 0 01-3-3V4a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3z"
-              ></path>
-            </svg>
-            <span>Inbox</span>
-            <span
-                class="text-ctrlBtn font-normal text-sm border border-ctrlBtn rounded-md px-1 ml-auto hidden group-hover:block hover:bg-borderLightGrey mr-2">Add shortcut</span>
-          </div>
-          <div class="divider bg-lightBorder h-[1px] w-[580px] ml-6"></div>
-
+        <div class="ml-4 text-secondary py-3">
+          <p class="font-medium">What's a group mention?</p>
+          <p>Group mentions let you notify several people in your workspace, like a team or department, at the same time. You can mention the group the same way you @mention individuals, like @support.</p>
         </div>
-
       </div>
-    </main>
+    </div>
   </div>
 </div>
-
 
 </body>
 </html>

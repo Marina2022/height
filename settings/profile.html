@@ -19,7 +19,7 @@
 
   <!--  Sidebar-->
   <div
-      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 ">
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen">
 
     <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
       <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
@@ -104,7 +104,7 @@
   </div>
 
   <!--  Content part -->
-  <div class="content flex-1 flex flex-col px-8 ">
+  <div class="content flex-1 flex flex-col px-8 overflow-auto h-screen ">
 
     <header>
       <h1 class="title text-primary font-medium flex items-center pt-7 py-3">
@@ -137,7 +137,7 @@
 
               <!--  later you can insert into avatar-img  -- avatar that you get from server API -->
               <span
-                  class="avatar-img  bg-[url('/ava.jpg')] rounded-full h-[120px] w-[120px] bg-cover cursor-pointer"></span>
+                  class="avatar-img  bg-[url('img/ava.jpg')] rounded-full h-[120px] w-[120px] bg-cover cursor-pointer"></span>
 
               <input class="hidden avatar-input" type="file" name="avatar" id="avatar">
 

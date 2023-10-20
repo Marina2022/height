@@ -8,7 +8,9 @@ export default {
       },
       colors: {
         primary: 'rgba(0,24,42,1)',
-        secondary: 'rgba(0,24,42, .6)',
+        // secondary: 'rgba(0,24,42, .6)',
+        secondary: 'rgba(0,24,42, .65)',
+        tret: 'rgba(0,24,42, .45)',
         grey: 'rgba(0,24,42, 0.07)',
         borderGrey: 'rgba(0,24,42, 0.1)',
         btnBlack: 'rgba(0,0,0, 0.84)',

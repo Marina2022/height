@@ -5,7 +5,7 @@
 
 * {
   user-select: none;
-  letter-spacing: .5px;
+  letter-spacing: .1px;
   vertical-align: baseline;
   box-sizing: border-box;
   scrollbar-width: thin;
@@ -45,30 +45,53 @@
   padding: 2.5px;
 }
 
-.radio-pref-label span {
-  border: 1px solid gray;
+.radio-pref-label .radio-span {
+  border: 1px solid #f2f3f4;
+  border: 1px solid #dedfe0;
   border-radius: 50%;
+  background-color: white;
 }
 
-.radio-pref:checked + .radio-pref-label span {
-  border: 4px solid rgba(0,24,42,1)
+.radio-pref:checked + .radio-pref-label .radio-span {
+  border: 4px solid rgba(0, 24, 42, 1)
+}
+
+.radio-pref:checked + .grey-rounded-label {
+  outline: solid rgba(0, 24, 42, 1) 2px;
 }
 
 .check-pref-label svg {
-  display:none
+  display: none
 }
 
 .check-pref:checked + .check-pref-label svg {
-  display:block
+  display: block
+}
+
+.switch-rainbow-label {
+  transition: all 300ms ease-out;
+}
+
+.switch-rainbow:checked + .switch-rainbow-label .switch-rainbow-span  {
+  background: conic-gradient(from 0deg at 64% 50%, #ff0200 -9.93deg, #ff0000 4.09deg, #ffa800 40.28deg, #ebff00 73.38deg, #24ff00 116.22deg, #00f0ff 150.26deg, #00fff0 183.69deg, #0066ff 224.55deg, #ad00ff 268.49deg, #ff00a8 310.68deg, #ff0200 350.07deg, #ff0000 364.09deg);
+  justify-content: flex-end;
+  transition: all 1s ease;
+}
+
+.switch-black:checked + .switch-black-label .switch-black-span  {
+  background: #334655;
+  justify-content: flex-end;
+  transition: all 1s ease;
 }
 
 .radio-theme:checked + .radio-theme-label img {
-  outline: solid rgba(0,24,42,1) 2px
+  outline: solid rgba(0, 24, 42, 1) 2px;
+  border: none;
 }
 
 .check-pref:checked + .check-pref-label .check-pref-container {
-  background-color: rgba(0,24,42,1);
-  border:none
+  background-color: rgba(0, 24, 42, 1);
+  border: none;
 }
 
 
@@ -80,10 +103,26 @@
   width: calc(100vw - 220px - 12px)
 }
 
+
+.rainbow-switch-on {
+  background: conic-gradient(from 0deg at 64% 50%, #ff0200 -9.93deg, #ff0000 4.09deg, #ffa800 40.28deg, #ebff00 73.38deg, #24ff00 116.22deg, #00f0ff 150.26deg, #00fff0 183.69deg, #0066ff 224.55deg, #ad00ff 268.49deg, #ff00a8 310.68deg, #ff0200 350.07deg, #ff0000 364.09deg);
+  justify-content: flex-end;
+}
+
+.rainbow-bg {
+  /*background: rgba(255,255,255,.5), url(/img/copilot.png);*/
+  /*background-size: cover;*/
+  background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.8)), url(/img/rainbow-bg.png) left top repeat;
+
+
+}
+
+
 @layer base {
   .item-active > svg {
     @apply block
   }
+
   .item-active > a {
     @apply block flex-1
   }
@@ -100,6 +139,8 @@
   .rotated-row {
     @apply -rotate-90 origin-center relative left-[3px] top-[3px]
   }
+
+
 
 }
 
@@ -123,5 +164,10 @@
 
   .btn-with-shadow {
     @apply text-secondary font-medium border border-[#e1e4e6] items-center px-2 rounded-lg  flex gap-2 items-center cursor-pointer hover:bg-greyBtnHoverBg border-b-[#c8cdd1] h-[28px]
+  }
+
+
+  .btn-bg-on-hover {
+    @apply text-secondary font-medium items-center px-2 rounded-lg flex gap-2 items-center cursor-pointer hover:bg-btnBgHover h-[28px]
   }
 }

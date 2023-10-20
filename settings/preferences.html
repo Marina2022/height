@@ -19,7 +19,7 @@
 
   <!--  Sidebar-->
   <div
-      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 ">
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen">
 
     <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
       <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
@@ -104,7 +104,7 @@
   </div>
 
   <!--  Content part -->
-  <div class="content flex-1 flex flex-col px-8 ">
+  <div class="content flex-1 flex flex-col px-8 overflow-auto h-screen">
 
     <header>
       <h1 class="title text-primary font-medium flex items-center pt-7 py-3">
@@ -112,138 +112,59 @@
       </h1>
     </header>
 
-    <p class="text-[12px] leading-[18px] text-secondary mb-6 max-w-[580px]">
-      Customize your Height workspace personal preferences. These settings are user-specific, so everyone can set up
-      their own preferences for these settings.
-    </p>
+    <main>
+      <p class="text-[12px] leading-[18px] text-t mb-6 max-w-[580px]">
+        Customize your Height workspace personal preferences. These settings are user-specific, so everyone can set up
+        their own preferences for these settings.
+      </p>
 
-    <!--      radio block 1 -->
-    <div class="flex gap-[20px] mb-5">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Open tasks as…
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-        <input class="radio-pref hidden" type="radio" id="radio1" name="open-tasks" checked>
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio1">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Modal (Recommended)
-        </label>
-        <input class="radio-pref hidden" type="radio" id="radio2" name="open-tasks">
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio2">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          FullscreenModal (Recommended)
-        </label>
-      </div>
-    </div>
-
-    <!--      radio block 2 -->
-    <div class="flex gap-[20px] mb-5">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Task layout
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-        <input class="radio-pref hidden" type="radio" id="radio3" name="task-layout" checked>
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio3">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Responsive (Recommended)
-        </label>
-        <input class="radio-pref hidden" type="radio" id="radio4" name="task-layout">
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio4">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Always as tabs
-        </label>
-      </div>
-    </div>
-
-
-    <!--      check block 1 -->
-    <div class="flex gap-[20px] mb-5">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Spreadsheet & Kanban
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-        <input class="check-pref hidden" type="checkbox" id="check1" checked>
-        <label class="check-pref-label flex items-center gap-3 mb-2" for="check1">
-          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
-         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
-                  fill="var(--fill)"></path>
-          </svg>
-          </span>
-          Show task IDs
-          <span
-              class="text-ctrlBtn font-normal text-sm border border-lightBorder rounded-md px-1 -ml-2">Shift+Ctrl+I</span>
-        </label>
-        <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
-          See the unique ID for each task to refer to easily refer to specific tasks or link them to a pull request.
-        </p>
-      </div>
-    </div>
-
-    <!--      check block 2 -->
-    <div class="flex gap-[20px] mb-5">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Attributes
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-
-        <div>
-          <input class="check-pref hidden" type="checkbox" id="check2">
-          <label class="check-pref-label flex items-center gap-3 mb-2" for="check2">
-          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
-         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
-                  fill="var(--fill)"></path>
-          </svg>
-          </span>
-            Show list names
-            <span class="text-ctrlBtn font-normal text-sm border border-lightBorder rounded-md px-1 -ml-2">;</span>
-          </label>
-          <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
-            See the name next to each list icon.
-          </p>
+      <!--      radio block 1 -->
+      <div class="flex gap-[20px] mb-5">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Open tasks as…
         </div>
-
-        <div>
-          <input class="check-pref hidden" type="checkbox" id="check3" checked>
-          <label class="check-pref-label flex items-center gap-3 mb-2" for="check3">
-          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
-         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
-                  fill="var(--fill)"></path>
-          </svg>
-          </span>
-            Show linked task names
-            <span class="text-ctrlBtn font-normal text-sm border border-lightBorder rounded-md px-1 -ml-2">Ctrl+;</span>
+        <div class="w-[340px] text-primary font-medium">
+          <input class="radio-pref hidden" type="radio" id="radio1" name="open-tasks" checked>
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio1">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            Modal (Recommended)
           </label>
-          <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
-            Show task names next to task ids for linked tasks.
-          </p>
+          <input class="radio-pref hidden" type="radio" id="radio2" name="open-tasks">
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio2">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            FullscreenModal (Recommended)
+          </label>
         </div>
+      </div>
 
-        <div>
-          <input class="check-pref hidden" type="checkbox" id="check4" checked>
-          <label class="check-pref-label flex items-center gap-3 mb-2" for="check4">
-          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
-         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
-                  fill="var(--fill)"></path>
-          </svg>
-          </span>
-            Show date colors
-          </label>
-          <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
-            See colors for date-type attributes (like Due date).
-          </p>
+      <!--      radio block 2 -->
+      <div class="flex gap-[20px] mb-5">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Task layout
         </div>
+        <div class="w-[340px] text-primary font-medium">
+          <input class="radio-pref hidden" type="radio" id="radio3" name="task-layout" checked>
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio3">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            Responsive (Recommended)
+          </label>
+          <input class="radio-pref hidden" type="radio" id="radio4" name="task-layout">
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio4">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            Always as tabs
+          </label>
+        </div>
+      </div>
 
-        <div>
-          <input class="check-pref hidden" type="checkbox" id="check5">
-          <label class="check-pref-label flex items-center gap-3 mb-2" for="check5">
+
+      <!--      check block 1 -->
+      <div class="flex gap-[20px] mb-5">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Spreadsheet & Kanban
+        </div>
+        <div class="w-[340px] text-primary font-medium">
+          <input class="check-pref hidden" type="checkbox" id="check1" checked>
+          <label class="check-pref-label flex items-center gap-3 mb-2" for="check1">
           <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
          <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -251,162 +172,241 @@
                   fill="var(--fill)"></path>
           </svg>
           </span>
-            Show Timer
+            Show task IDs
+            <span
+                class="text-ctrlBtn font-normal text-sm border border-lightBorder rounded-md px-1 -ml-2">Shift+Ctrl+I</span>
           </label>
           <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
-            Display Timer in sidebar.
+            See the unique ID for each task to refer to easily refer to specific tasks or link them to a pull request.
           </p>
         </div>
       </div>
-    </div>
 
+      <!--      check block 2 -->
+      <div class="flex gap-[20px] mb-5">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Attributes
+        </div>
+        <div class="w-[340px] text-primary font-medium">
 
-    <!--      btn block 1 -->
-    <div class="flex gap-[20px] mb-7">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Time tracking
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-        <button class="btn-with-shadow text-primary w-[240px]">
-          <svg class="w-4 h-4 " stroke="text-secondary" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8.625 4.5a.625.625 0 10-1.25 0V8c0 .345.28.625.625.625h3.5a.625.625 0 100-1.25H8.625V4.5z"
-                  fill="var(--fill)"></path>
+          <div>
+            <input class="check-pref hidden" type="checkbox" id="check2">
+            <label class="check-pref-label flex items-center gap-3 mb-2" for="check2">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M15 8A7 7 0 111 8a7 7 0 0114 0zm-1.5 0a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
                   fill="var(--fill)"></path>
           </svg>
-          <span>No integration</span>
-          <svg class="w-5 h-5 ml-auto" stroke="text-secondary" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          </span>
+              Show list names
+              <span class="text-ctrlBtn font-normal text-sm border border-lightBorder rounded-md px-1 -ml-2">;</span>
+            </label>
+            <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
+              See the name next to each list icon.
+            </p>
+          </div>
+
+          <div>
+            <input class="check-pref hidden" type="checkbox" id="check3" checked>
+            <label class="check-pref-label flex items-center gap-3 mb-2" for="check3">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
                   fill="var(--fill)"></path>
           </svg>
-        </button>
-        <p class="text-[12px] leading-[18px] text-secondary mb-6 mt-2">
-          Optionally sync your Timer with a time tracker to send automatic updates.
-        </p>
+          </span>
+              Show linked task names
+              <span
+                  class="text-ctrlBtn font-normal text-sm border border-lightBorder rounded-md px-1 -ml-2">Ctrl+;</span>
+            </label>
+            <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
+              Show task names next to task ids for linked tasks.
+            </p>
+          </div>
 
-      </div>
-    </div>
+          <div>
+            <input class="check-pref hidden" type="checkbox" id="check4" checked>
+            <label class="check-pref-label flex items-center gap-3 mb-2" for="check4">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+              Show date colors
+            </label>
+            <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
+              See colors for date-type attributes (like Due date).
+            </p>
+          </div>
 
-
-    <!--      btn block 2 -->
-    <div class="flex gap-[20px] mb-7">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Default list for new tasks
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-        <button class="btn-with-shadow text-primary w-[340px] border-b-[#e1e4e6]">
-
-          <span class="bg-tableCellsBg block px-2 rounded-md "># general</span>
-
-        </button>
-        <p class="text-[12px] leading-[18px] text-secondary mb-6 mt-2">
-          Any time you create a task when not in a specific list, new tasks will be created in this list:
-        </p>
-
-      </div>
-    </div>
-
-    <!--      radio block 3 -->
-    <div class="flex gap-[20px] mb-5">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Display user names
-      </div>
-      <div class="w-[353px] text-primary font-medium">
-        <input class="radio-pref hidden" type="radio" id="radio5" name="user-name" checked>
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio5">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Full names
-        </label>
-        <input class="radio-pref hidden" type="radio" id="radio6" name="user-name">
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio6">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Usernames
-        </label>
-
-        <p class="text-[12px] leading-[18px] text-secondary mb-6 mt-2">
-          Choose whether to see the full names or the usernames for other members and guests of your workspace.
-        </p>
+          <div>
+            <input class="check-pref hidden" type="checkbox" id="check5">
+            <label class="check-pref-label flex items-center gap-3 mb-2" for="check5">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+              Show Timer
+            </label>
+            <p class="pl-7 text-[12px] leading-[18px] text-secondary mb-6">
+              Display Timer in sidebar.
+            </p>
+          </div>
+        </div>
       </div>
 
 
-    </div>
+      <!--      btn block 1 -->
+      <div class="flex gap-[20px] mb-7">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Time tracking
+        </div>
+        <div class="w-[340px] text-primary font-medium">
+          <button class="btn-with-shadow text-primary w-[240px]">
+            <svg class="w-4 h-4 " stroke="text-secondary" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.625 4.5a.625.625 0 10-1.25 0V8c0 .345.28.625.625.625h3.5a.625.625 0 100-1.25H8.625V4.5z"
+                    fill="var(--fill)"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15 8A7 7 0 111 8a7 7 0 0114 0zm-1.5 0a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z"
+                    fill="var(--fill)"></path>
+            </svg>
+            <span>No integration</span>
+            <svg class="w-5 h-5 ml-auto" stroke="text-secondary" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.29 5.925c.266.246.281.66.035.926l-3.76 4.055a.655.655 0 01-.951.01l-3.93-4.055a.655.655 0 01.942-.912l3.448 3.559 3.29-3.548a.655.655 0 01.926-.035z"
+                    fill="var(--fill)"></path>
+            </svg>
+          </button>
+          <p class="text-[12px] leading-[18px] text-secondary mb-6 mt-2">
+            Optionally sync your Timer with a time tracker to send automatic updates.
+          </p>
 
-    <!--      btn block 3 -->
-    <div class="flex gap-[20px] mb-7">
-      <div class="w-[220px] text-right text-primary font-medium">
-        First day of the week
-      </div>
-      <div class="w-[340px] text-primary font-medium">
-        <button class="btn-with-shadow text-primary w-[340px] border-b-[#e1e4e6]">
-          Sunday
-        </button>
-      </div>
-    </div>
-
-    <!--      radio block 4 -->
-    <div class="flex gap-[20px] mb-5">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Sound effects
-      </div>
-      <div class="w-[353px] text-primary font-medium">
-        <input class="radio-pref hidden" type="radio" id="radio7" name="sound">
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio7">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          On
-        </label>
-        <input class="radio-pref hidden" type="radio" id="radio8" name="sound">
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio8">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Notifications only
-        </label>
-        <input class="radio-pref hidden" type="radio" id="radio9" name="sound" checked>
-        <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio9">
-          <span class="block w-[14px] h-[14px] rounded-full border "></span>
-          Off
-        </label>
+        </div>
       </div>
 
 
-    </div>
+      <!--      btn block 2 -->
+      <div class="flex gap-[20px] mb-7">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Default list for new tasks
+        </div>
+        <div class="w-[340px] text-primary font-medium">
+          <button class="btn-with-shadow text-primary w-[340px] border-b-[#e1e4e6]">
 
-    <!--      theme -->
-    <div class="flex gap-[20px] mb-[52px]">
-      <div class="w-[220px] text-right text-primary font-medium">
-        Theme
+            <span class="bg-tableCellsBg block px-2 rounded-md "># general</span>
+
+          </button>
+          <p class="text-[12px] leading-[18px] text-secondary mb-6 mt-2">
+            Any time you create a task when not in a specific list, new tasks will be created in this list:
+          </p>
+
+        </div>
       </div>
-      <div class="text-primary font-medium flex gap-3 font-normal">
+
+      <!--      radio block 3 -->
+      <div class="flex gap-[20px] mb-5">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Display user names
+        </div>
+        <div class="w-[353px] text-primary font-medium">
+          <input class="radio-pref hidden" type="radio" id="radio5" name="user-name" checked>
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio5">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            Full names
+          </label>
+          <input class="radio-pref hidden" type="radio" id="radio6" name="user-name">
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio6">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            Usernames
+          </label>
+
+          <p class="text-[12px] leading-[18px] text-secondary mb-6 mt-2">
+            Choose whether to see the full names or the usernames for other members and guests of your workspace.
+          </p>
+        </div>
 
 
-        <input class="radio-theme hidden" type="radio" id="radio11" name="theme" checked>
-        <label class="radio-theme-label flex items-center gap-3 mb-2" for="radio11">
+      </div>
+
+      <!--      btn block 3 -->
+      <div class="flex gap-[20px] mb-7">
+        <div class="w-[220px] text-right text-primary font-medium">
+          First day of the week
+        </div>
+        <div class="w-[340px] text-primary font-medium">
+          <button class="btn-with-shadow text-primary w-[340px] border-b-[#e1e4e6]">
+            Sunday
+          </button>
+        </div>
+      </div>
+
+      <!--      radio block 4 -->
+      <div class="flex gap-[20px] mb-5">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Sound effects
+        </div>
+        <div class="w-[353px] text-primary font-medium">
+          <input class="radio-pref hidden" type="radio" id="radio7" name="sound">
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio7">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            On
+          </label>
+          <input class="radio-pref hidden" type="radio" id="radio8" name="sound">
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio8">
+            <span class="radio-span block w-[14px] h-[14px] rounded-full border "></span>
+            Notifications only
+          </label>
+          <input class="radio-pref hidden" type="radio" id="radio9" name="sound" checked>
+          <label class="radio-pref-label flex items-center gap-3 mb-2" for="radio9">
+            <span class="block w-[14px] h-[14px] rounded-full border "></span>
+            Off
+          </label>
+        </div>
+
+
+      </div>
+
+      <!--      theme -->
+      <div class="flex gap-[20px] mb-[52px]">
+        <div class="w-[220px] text-right text-primary font-medium">
+          Theme
+        </div>
+        <div class="text-primary font-medium flex gap-3 font-normal">
+
+
+          <input class="radio-theme hidden" type="radio" id="radio11" name="theme" checked>
+          <label class="radio-theme-label flex items-center gap-3 mb-2" for="radio11">
           <span class="flex flex-col items-center">
-            <img class="w-[100px] h-[60px] rounded-lg border border-lightBorder" src="/themes/mode1.png" alt="mode">
+            <img class="w-[100px] h-[60px] rounded-lg border border-lightBorder" src="/img/themes/mode1.png" alt="mode">
             <span class="block text-sm mt-2">System Default</span>
           </span>
-        </label>
+          </label>
 
-        <input class="radio-theme hidden" type="radio" id="radio12" name="theme">
-        <label class="radio-theme-label flex items-center gap-3 mb-2" for="radio12">
+          <input class="radio-theme hidden" type="radio" id="radio12" name="theme">
+          <label class="radio-theme-label flex items-center gap-3 mb-2" for="radio12">
           <span class="flex flex-col items-center">
-            <img class="w-[100px] h-[60px] rounded-lg border border-lightBorder" src="/themes/mode2.png" alt="mode">
+            <img class="w-[100px] h-[60px] rounded-lg border border-lightBorder" src="/img/themes/mode2.png" alt="mode">
             <span class="block text-sm mt-2">Light</span>
           </span>
-        </label>
+          </label>
 
-        <input class="radio-theme hidden" type="radio" id="radio13" name="theme">
-        <label class="radio-theme-label flex items-center gap-3 mb-2" for="radio13">
+          <input class="radio-theme hidden" type="radio" id="radio13" name="theme">
+          <label class="radio-theme-label flex items-center gap-3 mb-2" for="radio13">
           <span class="flex flex-col items-center">
-            <img class="w-[100px] h-[60px] rounded-lg border border-lightBorder" src="/themes/mode3.png" alt="mode">
+            <img class="w-[100px] h-[60px] rounded-lg border border-lightBorder" src="/img/themes/mode3.png" alt="mode">
             <span class="block text-sm mt-2">Dark</span>
           </span>
-        </label>
+          </label>
 
+        </div>
       </div>
-    </div>
-
-    <main>
 
     </main>
   </div>
