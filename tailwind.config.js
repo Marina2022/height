@@ -8,7 +8,6 @@ export default {
       },
       colors: {
         primary: 'rgba(0,24,42,1)',
-        // secondary: 'rgba(0,24,42, .6)',
         secondary: 'rgba(0,24,42, .65)',
         tret: 'rgba(0,24,42, .45)',
         grey: 'rgba(0,24,42, 0.07)',
@@ -25,7 +24,8 @@ export default {
         tableCellsBgHover: '#dcdedf',
         tableRowHover: '#fcfcfc',
         commentText: '#9ba5ab',
-        ctrlBtn: '#9d9d9d'
+        ctrlBtn: '#9d9d9d',
+        brownGrey: '#5c5c5c'
 
       },
       boxShadow: {

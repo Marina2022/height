@@ -133,7 +133,7 @@
         <div class="flex items-start gap-2">
           <div>
             <p class="text-secondary block mb-2">Profile picture</p>
-            <label class="avatar-label flex gap-2 items-start" for="avatar">
+            <label class="avatar-label cursor-pointer flex gap-2 items-start" for="avatar">
 
               <!--  later you can insert into avatar-img  -- avatar that you get from server API -->
               <span
@@ -154,17 +154,18 @@
         </div>
 
         <div class="inline-block">
-          <button disabled type="submit" class="bg-[#242424] text-[#eaeaea] rounded-lg py-[2px] px-2 font-medium h-7 flex justify-center items-center ml-[350px] mt-2  disabled:bg-white disabled:text-[#cecece] disabled:font-light group
+          <button disabled type="submit" class="bg-[#242424] text-[#eaeaea] rounded-lg py-[2px] px-2 font-medium h-7 flex justify-center items-center ml-[458px] mt-2  disabled:bg-white disabled:text-[#cecece] disabled:font-light group
         disabled:shadow-btnDisabledShadow disabled:border-lightBorder   "
           >
             Save <span
               class="text-[#999999] border border-[#999999] rounded-md px-1 ml-1  text-sm group-disabled:text-lightBorder group-disabled:border-none group-disabled:font-normal">Ctrl+Enter</span>
           </button>
 
-          <div class="h-[1px] w-full bg-lightBorder mt-10 mb-11"></div>
+
         </div>
       </form>
 
+      <div class="h-[1px] max-w-[580px] w-full bg-lightBorder mt-10 mb-11"></div>
       <div class="max-w-[580px]">
         <h2 class="title text-primary font-medium flex items-center py-3 mb-1">
           Authentication

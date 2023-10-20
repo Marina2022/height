@@ -140,6 +140,17 @@
     @apply -rotate-90 origin-center relative left-[3px] top-[3px]
   }
 
+  .imports-grid {
+    display: grid;
+    grid-column-gap: 12px;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 26px;
+  }
+
+  .greyscale {
+    filter: grayscale(100%);
+  }
+
 
 
 }
@@ -163,7 +174,7 @@
   }
 
   .btn-with-shadow {
-    @apply text-secondary font-medium border border-[#e1e4e6] items-center px-2 rounded-lg  flex gap-2 items-center cursor-pointer hover:bg-greyBtnHoverBg border-b-[#c8cdd1] h-[28px]
+    @apply text-secondary font-medium border border-[#e1e4e6] items-center px-2 rounded-lg  flex gap-2 cursor-pointer hover:bg-greyBtnHoverBg border-b-[#c8cdd1] h-[28px]
   }
 
 
