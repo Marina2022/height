@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <link rel="stylesheet" href="/dist/output.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>site</title>
+</head>
+<body class="h-screen w-full font-inter">
+
+
+<div class="main-wrapper flex  w-full text-primary min-h-screen ">
+
+  <!--  Sidebar-->
+  <div
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen pb-[25px]">
+
+    <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
+      <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
+           xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+              fill="var(--fill)"></path>
+      </svg>
+    </a>
+
+    <nav class=" flex flex-col mt-6">
+      <ul class="flex flex-col flex-1 ">
+        <li class="sidebar-item font-medium text-primary">
+          <span class="pl-5">Personal settings</span>
+        </li>
+        <li class="sidebar-item">
+          <a href="profile.html" class="pl-5">Profile</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="preferences.html" class="pl-5">Preferences</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="notifications.html" class="pl-5">Notifications</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="shortcuts.html" class="pl-5">Keyboard shortcuts</a>
+        </li>
+
+        <li class="sidebar-item font-medium text-primary mt-6">
+          <span class="pl-5">Product settings</span>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="attributes.html" class="pl-5">Attributes</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="automations.html" class="pl-5">Automations</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="copilot.html" class="pl-5">Copilot</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="groups.html" class="pl-5">Group mentions</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="import.html" class="pl-5">Import</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="integrations.html" class="pl-5">Integrations</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="taskForms.html" class="pl-5">Task forms</a>
+        </li>
+
+        <li class="sidebar-item font-medium text-primary mt-6">
+          <span class="pl-5">Workspace settings</span>
+        </li>
+        <li class="sidebar-item">
+          <a href="general.html" class="pl-5">General</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="api.html" class="pl-5">API</a>
+        </li>
+        <li class="item-active">
+          <a href="authentication.html" class="pl-5">Authentication</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="billing.html" class="pl-5">Billing</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="securityLog.html" class="pl-5">Security log</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="users.html" class="pl-5">Users</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--  Content part -->
+  <div class="content flex-1 flex flex-col px-8 overflow-auto h-screen">
+
+    <main class="max-w-[580px]">
+
+
+      <h1 class="title text-primary font-medium flex items-center pt-7 mb-5">
+        Authentication methods
+      </h1>
+
+      <p class=" mt-1 mb-4">
+        Configure the authentication methods that members of your workspace can use to log in to Height.
+      </p>
+
+      <form class="mb-[52px]">
+
+        <!--  grey rounded block 1 -->
+        <div class="py-4 px-5 bg-lightBorder rounded-[10px] mb-4">
+
+          <div class="flex gap-4 items-center ">
+            <div class="w-[24px] h-[24px] bg-[#2e8cff] flex justify-center items-center rounded-md shrink-0 u">
+              <svg class="w-5 h-5 stroke-none fill-white" stroke="currentColor" viewBox="-2 -2 20 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M.82 4.455A8.007 8.007 0 000 8a7.976 7.976 0 008 8c1.951 0 3.816-.692 5.214-1.992 1.468-1.365 2.422-3.4 2.422-6.008 0-.473-.072-.982-.181-1.455H8v3.091h4.29c-.4 1.964-2.072 3.091-4.29 3.091A4.718 4.718 0 013.273 8 4.718 4.718 0 018 3.273c1.127 0 2.145.4 2.945 1.054L13.273 2C11.855.764 10.036 0 8 0A7.977 7.977 0 00.82 4.455z"
+                    fill="var(--fill)"></path>
+              </svg>
+            </div>
+
+            <div>
+              <h3 class="title text-primary font-medium ">
+                Google authentication
+              </h3>
+              <p class="text-secondary">Members can log in with a Google account.</p>
+            </div>
+
+            <div class="ml-auto">
+              <input class="switch-rainbow hidden" type="checkbox" id="check" checked disabled>
+              <label class="switch-rainbow-label flex items-center gap-3" for="check">
+                <span
+                    class="switch-rainbow-span bg-greyBtnHoverBg flex items-center h-[15x] w-[26px] rounded-full p-[1px] border">
+                  <span class="bg-white h-[11px] w-[11px] rounded-full"> </span>
+                </span>
+              </label>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <!--  grey rounded block 2 -->
+        <div class="py-3 px-5 bg-lightBorder rounded-[10px] mb-4">
+          <div class="flex gap-3 items-center justify-between">
+            <div class="flex gap-4 items-center">
+              <div class="w-[24px] h-[24px] bg-secondary flex justify-center items-center rounded-md shrink-0 u">
+                <svg class="w-6 h-6 fill-white " stroke="none" viewBox="-2 -2 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M8.14242 4.27417C8.42361 4.27417 8.8829 4.16481 9.52027 3.9461C10.1576 3.7274 10.7107 3.61804 11.1793 3.61804C11.9479 3.61804 12.6322 3.82425 13.232 4.23667C13.5695 4.47413 13.9038 4.79594 14.235 5.20211C13.7351 5.62703 13.3695 6.00508 13.1383 6.33626C12.7196 6.93615 12.5103 7.59852 12.5103 8.32337C12.5103 9.11697 12.7321 9.83245 13.1758 10.4698C13.6195 11.1072 14.1256 11.5103 14.6943 11.679C14.4568 12.4476 14.0631 13.2505 13.5132 14.0879C12.6822 15.3439 11.8573 15.9719 11.0387 15.9719C10.7138 15.9719 10.2639 15.8688 9.68899 15.6626C9.12035 15.4564 8.63919 15.3533 8.24552 15.3533C7.85185 15.3533 7.39256 15.4595 6.86767 15.6719C6.34902 15.8906 5.92722 16 5.60229 16C4.62123 16 3.65892 15.1689 2.71535 13.5067C1.77179 11.8633 1.3 10.2511 1.3 8.67018C1.3 7.20172 1.65931 6.00508 2.37792 5.08026C3.10278 4.15544 4.0151 3.69303 5.11488 3.69303C5.58354 3.69303 6.14906 3.78988 6.81143 3.9836C7.48005 4.17731 7.92371 4.27417 8.14242 4.27417ZM11.0762 0.403046C11.0762 0.802968 10.9825 1.24038 10.795 1.71529C10.6076 2.1902 10.3107 2.63074 9.90457 3.03691C9.55464 3.38059 9.20783 3.61179 8.86415 3.73052C8.64544 3.79926 8.31426 3.85237 7.87059 3.88987C7.88309 2.94005 8.12992 2.11834 8.61108 1.42472C9.09848 0.731107 9.90145 0.2562 11.02 0C11.045 0.0812341 11.0606 0.153095 11.0668 0.215583C11.0731 0.278071 11.0762 0.340558 11.0762 0.403046Z"
+                      fill="var(--fill)"></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="title text-primary font-medium ">
+                  Apple authentication
+                </h3>
+                <p class="text-secondary">Members can log in with an Apple account.</p>
+              </div>
+            </div>
+
+            <div class="ml-auto">
+              <input class="switch-rainbow hidden" type="checkbox" id="check2" checked>
+              <label class="switch-rainbow-label flex items-center gap-3" for="check2">
+                <span
+                    class="switch-rainbow-span bg-greyBtnHoverBg flex items-center h-[15x] w-[26px] rounded-full p-[1px] border">
+                  <span class="bg-white h-[11px] w-[11px] rounded-full"> </span>
+                </span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!--  grey rounded block 3 -->
+        <div class="py-3 px-5 bg-lightBorder rounded-[10px] mb-3">
+          <div class="flex gap-3 items-center justify-between">
+            <div class="flex gap-4 items-center">
+              <div class="w-[24px] h-[24px] bg-primary flex justify-center items-center rounded-md shrink-0 u">
+                <svg class="w-6 h-6 fill-white" stroke="none" viewBox="-2 -2 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M8.35349 15.0576C9.72246 15.0576 11.1766 14.7114 11.8425 14.3651L11.3897 13.0122C10.8837 13.2039 9.65854 13.5555 8.44405 13.5555C4.91777 13.5555 3.01081 11.6485 3.01081 8.19681C3.01081 4.97948 4.83254 2.73693 8.31088 2.73693C11.15 2.73693 13.2647 4.3456 13.2594 7.37117C13.2647 9.5711 12.9238 10.5619 12.0715 10.5619C11.6188 10.5619 11.3524 10.1997 11.3471 9.67231V4.60128H9.86095V5.19787H9.78638C9.61592 4.72912 8.5932 4.29766 7.4373 4.45746C5.95115 4.65455 4.52359 5.87436 4.52359 8.1542C4.52359 10.5033 5.802 11.8829 7.53851 11.9628C8.74767 12.0214 9.68517 11.4834 9.93553 10.8495H9.99945C10.1273 11.6485 10.8304 12.0853 11.9064 12.0267C14.1969 11.9415 14.8521 9.89603 14.8467 7.46172C14.8521 3.96207 12.4977 1.2561 8.34817 1.2561C3.927 1.2561 1.3542 3.97805 1.34888 8.21812C1.3542 12.5594 3.88439 15.0576 8.35349 15.0576ZM7.98062 10.434C6.59035 10.434 6.1216 9.30477 6.11628 8.09028C6.1216 6.87579 6.7981 5.98622 7.99128 5.98622C9.31763 5.98622 9.80769 6.63608 9.81301 8.08495C9.82899 9.64035 9.32828 10.434 7.98062 10.434Z"
+                      fill="var(--fill)"></path>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="title text-primary font-medium ">
+                  Email & password
+                </h3>
+                <p class="text-secondary">Members can set an email and password to log in with.</p>
+              </div>
+            </div>
+            <div class="ml-auto">
+              <input class="switch-rainbow hidden" type="checkbox" id="check3" checked>
+              <label class="switch-rainbow-label flex items-center gap-3" for="check3">
+                <span
+                    class="switch-rainbow-span bg-greyBtnHoverBg flex items-center h-[15x] w-[26px] rounded-full p-[1px] border">
+                  <span class="bg-white h-[11px] w-[11px] rounded-full"> </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">or</div>
+
+        <!--  grey rounded block 4 -->
+        <div class="py-3 px-5 bg-lightBorder rounded-[10px] mt-3">
+          <div class="flex gap-3 items-center justify-between">
+            <div class="flex gap-4 items-center">
+              <div class="w-[24px] h-[24px] bg-primary flex justify-center items-center rounded-md shrink-0 u">
+                <svg class="w-6 h-6 fill-white" stroke="none" viewBox="-2 -2 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2.97877 14.6983C3.5785 14.7699 4.16264 14.4748 4.46087 13.9495L5.00002 13L6.49995 12.5L6.99995 11L8.28506 10.5L9.12669 9.65838L9.26012 9.7918C9.53645 10.0681 9.88768 10.2575 10.2704 10.3364L10.6427 10.4132C11.1779 10.5235 11.7327 10.3573 12.1191 9.97094L14.323 7.76703C15.0391 7.05092 15.1069 5.91254 14.4809 5.11648L12.9642 3.18795C12.866 3.0631 12.7533 2.95039 12.6285 2.8522L10.7 1.33564C9.90398 0.709597 8.76561 0.777404 8.0495 1.49352L5.6716 3.87141C5.28844 4.25457 5.16318 4.82562 5.35079 5.33398L5.51971 5.79172C5.61978 6.06287 5.77743 6.30912 5.98181 6.51349L6.15801 6.6897L1.51504 11.3327C1.18981 11.6579 1.03177 12.1143 1.08626 12.571L1.22319 13.7187C1.27788 14.1771 1.63927 14.5385 2.09767 14.5932L2.97877 14.6983ZM7.92578 6.6897L6.86569 5.62961C6.78905 5.55297 6.72993 5.46062 6.69241 5.35894L6.52348 4.9012C6.50476 4.85049 6.51726 4.79352 6.55548 4.7553L8.93338 2.3774C9.20192 2.10886 9.62881 2.08343 9.92733 2.3182L11.8558 3.83476C11.9026 3.87157 11.9448 3.91384 11.9817 3.96066L13.4983 5.88919C13.7331 6.18771 13.7077 6.6146 13.4391 6.88315L11.2352 9.08706C11.1462 9.17605 11.0184 9.21432 10.8952 9.18891L10.5229 9.11213C10.3793 9.08254 10.2476 9.01154 10.144 8.90792L9.12669 7.89061L7.58696 9.43034L5.99971 10.0479L5.51174 11.5118L4.1498 11.9658L3.37387 13.3323C3.32417 13.4199 3.22681 13.4691 3.12686 13.4571L2.44108 13.3753L2.32746 12.423C2.31837 12.3468 2.34471 12.2708 2.39892 12.2166L7.92578 6.6897Z"
+                        fill="var(--fill)"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="title text-primary font-medium ">
+                  Single Sign-On (SSO) <span class="text-[#7F58EB] border px-1 py-[1px] rounded-md">Business plan</span>
+                </h3>
+                <p class="text-secondary max-w-[420px]">Okta, Google Workspace, Azure, OneLogin, and custom SAML and
+                  OpenID.
+                  <button class="btn-bg-on-hover hover:!bg-[#e7e7e7] h-[24px] inline-block ">Learn more about SSO
+                  </button>
+                </p>
+              </div>
+            </div>
+            <button class="btn-with-shadow ">
+              <span class="pb-[2px] shrink-0">Set up</span>
+            </button>
+          </div>
+        </div>
+
+
+        <!--  info block -->
+        <div class="flex border border-borderGrey rounded-xl overflow-hidden max-w-[580px] pr-1 mt-3">
+          <div class="bg-tableCellsBg px-2 border-borderGrey border rounded-l-xl border-r-0 flex items-center">
+            <svg class="w-5 h-5 " stroke="secondary" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M11.21 3.565c0 .37-.132.69-.397.96s-.588.405-.968.405c-.37 0-.69-.135-.96-.405s-.405-.59-.405-.96.135-.69.405-.96.59-.405.96-.405c.38 0 .703.135.968.405s.397.59.397.96zm-1.155 7.74c0 .16-.377.535-1.132 1.125-.755.59-1.438.885-2.048.885-.42 0-.725-.107-.915-.322a1.07 1.07 0 01-.285-.728c0-.17.025-.328.075-.473.05-.144.105-.292.165-.442L7.34 8.395c.08-.17.138-.307.173-.412a.893.893 0 00.052-.278c0-.08-.015-.138-.045-.173a.15.15 0 00-.12-.052c-.13 0-.382.197-.757.592-.375.396-.598.593-.668.593-.08 0-.16-.055-.24-.165-.08-.11-.12-.18-.12-.21 0-.1.095-.262.285-.487.19-.226.43-.463.72-.713.26-.23.573-.445.938-.645s.687-.3.967-.3c.45 0 .788.128 1.013.383.225.255.337.562.337.922 0 .15-.015.31-.045.48a1.69 1.69 0 01-.195.525l-1.14 2.505c-.09.21-.155.38-.195.51-.04.13-.06.22-.06.27 0 .06.015.098.045.112a.2.2 0 00.09.023c.22 0 .478-.158.773-.473.295-.314.482-.472.562-.472.07 0 .145.053.225.158.08.105.12.177.12.217z"
+                  fill="var(--fill)"></path>
+            </svg>
+          </div>
+
+          <div class="ml-2 text-secondary py-2">
+            This setting applies to <strong>workspace members only</strong>. Invited guests can still sign up and log in
+            with an email and password.
+          </div>
+        </div>
+
+        <h5 class="font-medium text-primary mt-10 mb-4">Members</h5>
+
+        <!--      check block 1 -->
+
+        <div class="text-secondary mb-7">
+          <input class="check-pref hidden" type="checkbox" id="check1" checked>
+          <label class="text-primary font-medium check-pref-label flex items-center gap-3 mb-2" for="check1">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+            Secret link
+          </label>
+
+          <div class="pl-7">
+            <p>
+              Anyone with the secret link can sign up as a member of your workspace.
+            </p>
+
+            <p class="mt-2 h-[28px] w-full rounded-[10px] py-1 px-2 border border-borderGrey">
+              https://height.app/invite/Io2oYiWkDTbZCu
+            </p>
+          </div>
+        </div>
+
+
+        <!--      check block 2 -->
+
+        <div class="text-secondary mb-7">
+          <input class="check-pref hidden" type="checkbox" id="check4" checked>
+          <label class="text-primary font-medium check-pref-label flex items-center gap-3 mb-2" for="check4">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+            Allowed domains
+          </label>
+
+          <div class="pl-7 mb-3">
+            <p>
+              Anyone with an email from one of these domains can sign up as a member of your workspace without an
+              invitation code.
+            </p>
+
+            <p class="mt-2 h-[28px] w-full rounded-[10px] py-1 px-2 border border-borderGrey">
+              i.e. example.com
+            </p>
+          </div>
+
+
+          <!--    checkbox-3-->
+
+          <div class="pl-7">
+            <input class="check-pref hidden " type="checkbox" id="check3" disabled>
+            <label class="text-primary font-medium check-pref-label flex items-center gap-3 mb-2" for="check3">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+
+              <span class="text-secondary">Restrict invitations to these domains</span> <span
+                class="text-[#7F58EB] border px-1 py-[1px] rounded-md cursor-pointer">Business plan</span>
+            </label>
+
+            <p class="pl-7">When signing up or changing an existing email address, members will now be required to use
+              an email address
+              from one of these domains.</p>
+          </div>
+        </div>
+
+        <h5 class="font-medium text-primary mt-10 mb-4">Guests</h5>
+
+        <div>
+          <input class="check-pref hidden " type="checkbox" id="check3" disabled>
+          <label class="text-primary font-medium check-pref-label flex items-center gap-3 mb-2" for="check3">
+          <span class="check-pref-container block w-[14px] h-[14px] rounded-[4px] border ">
+         <svg class="w-4 h-4 " fill="white" stroke="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.2447 5.19971C11.5218 5.40549 11.5797 5.79696 11.3739 6.0741L7.41808 11.4019C7.30503 11.5541 7.12897 11.6468 6.93946 11.6538C6.74996 11.6609 6.56751 11.5815 6.44348 11.438L4.23247 8.88072C4.00671 8.61961 4.03538 8.22492 4.2965 7.99916C4.55761 7.77341 4.9523 7.80207 5.17806 8.06319L6.87921 10.0308L10.3703 5.32893C10.5761 5.05179 10.9676 4.99394 11.2447 5.19971Z"
+                  fill="var(--fill)"></path>
+          </svg>
+          </span>
+            <span class="text-secondary">Restrict invitations to these emails</span> <span
+              class="text-[#7F58EB] border px-1 py-[1px] rounded-md cursor-pointer">Business plan</span>
+          </label>
+
+          <p class="pl-7 mb-[30px] text-secondary">Only these emails can now be invited as guests to a list or a
+            task.</p>
+        </div>
+
+        <div class="h-[1px] max-w-[580px] w-full bg-lightBorder mt-2 "></div>
+
+        <div class="inline-block">
+          <button disabled type="submit" class="bg-[#242424] text-[#eaeaea] rounded-lg py-[2px] px-2 font-medium h-7 flex justify-center items-center ml-[458px] mt-2  disabled:bg-white disabled:text-[#cecece] disabled:font-light group
+        disabled:shadow-btnDisabledShadow disabled:border-lightBorder"
+          >
+            Save <span
+              class="text-[#999999] border border-[#999999] rounded-md px-1 ml-1  text-sm group-disabled:text-lightBorder group-disabled:border-none group-disabled:font-normal">Ctrl+Enter</span>
+          </button>
+        </div>
+
+      </form>
+
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

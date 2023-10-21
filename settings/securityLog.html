@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <link rel="stylesheet" href="/dist/output.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>site</title>
+</head>
+<body class="h-screen w-full font-inter ">
+
+<div class="main-wrapper flex  w-full text-primary min-h-screen ">
+
+  <!--  Sidebar-->
+  <div
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen pb-[25px]">
+
+    <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
+      <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
+           xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.285 1.814a.75.75 0 01-.01 1.06L4.084 6.996h9.667a.75.75 0 010 1.5H4.09l4.184 4.088a.75.75 0 11-1.048 1.073l-5.5-5.375a.75.75 0 01-.002-1.071l5.5-5.406a.75.75 0 011.06.009z"
+              fill="var(--fill)"></path>
+      </svg>
+    </a>
+
+    <nav class=" flex flex-col mt-6">
+      <ul class="flex flex-col flex-1 ">
+        <li class="sidebar-item font-medium text-primary">
+          <span class="pl-5">Personal settings</span>
+        </li>
+        <li class="sidebar-item">
+          <a href="profile.html" class="pl-5">Profile</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="preferences.html" class="pl-5">Preferences</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="notifications.html" class="pl-5">Notifications</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="shortcuts.html" class="pl-5">Keyboard shortcuts</a>
+        </li>
+
+        <li class="sidebar-item font-medium text-primary mt-6">
+          <span class="pl-5">Product settings</span>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="attributes.html" class="pl-5">Attributes</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="automations.html" class="pl-5">Automations</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="copilot.html" class="pl-5">Copilot</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="groups.html" class="pl-5">Group mentions</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="import.html" class="pl-5">Import</a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="integrations.html" class="pl-5">Integrations</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="taskForms.html" class="pl-5">Task forms</a>
+        </li>
+
+        <li class="sidebar-item font-medium text-primary mt-6">
+          <span class="pl-5">Workspace settings</span>
+        </li>
+        <li class="sidebar-item">
+          <a href="general.html" class="pl-5">General</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="api.html" class="pl-5">API</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="authentication.html" class="pl-5">Authentication</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="billing.html" class="pl-5">Billing</a>
+        </li>
+        <li class="item-active">
+          <a href="securityLog.html" class="pl-5">Security log</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="users.html" class="pl-5">Users</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--  Content part -->
+  <div class="content flex-1 flex flex-col px-8 h-screen overflow-hidden ">
+
+
+    <main>
+      <!--   header-->
+      <div class="flex items-center pt-7 mb-4 gap-1">
+        <h1 class="title text-primary font-medium flex items-center ">
+          Security log
+        </h1>
+        <button
+            class="text-veryLightGrey py-1 px-1 w-[28px] h-[28px] rounded-full hover:bg-btnBgHover flex items-center justify-center">
+          <svg class="w-[16px] h-[16px]" stroke="currentColor" fill="currentColor" stroke-width="0"
+               viewBox="0 0 16 16"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3.5 6.25a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zm5 0a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zm6.25 1.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0z"
+            ></path>
+          </svg>
+        </button>
+
+        <span
+            class=" font-medium text-[#7F58EB] border px-1 py-[1px] rounded-md cursor-pointer">Business plan</span>
+
+      </div>
+
+      <!--  table-->
+
+      <div class="text-veryLightGrey relative">
+        <div class="security-overlay flex justify-center items-start pt-[130px]">
+
+          <!--  info block -->
+          <div class="flex border border-lightBorder rounded-xl overflow-hidden max-w-[320px] pr-3 ml-10 bg-white">
+            <div class="bg-[#f7f2ff] px-2  border-[#f1e8ff] border rounded-l-xl border-r-0 flex items-center">
+              <svg class="w-5 h-5 " fill="#7f58eb"  viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.21 3.565c0 .37-.132.69-.397.96s-.588.405-.968.405c-.37 0-.69-.135-.96-.405s-.405-.59-.405-.96.135-.69.405-.96.59-.405.96-.405c.38 0 .703.135.968.405s.397.59.397.96zm-1.155 7.74c0 .16-.377.535-1.132 1.125-.755.59-1.438.885-2.048.885-.42 0-.725-.107-.915-.322a1.07 1.07 0 01-.285-.728c0-.17.025-.328.075-.473.05-.144.105-.292.165-.442L7.34 8.395c.08-.17.138-.307.173-.412a.893.893 0 00.052-.278c0-.08-.015-.138-.045-.173a.15.15 0 00-.12-.052c-.13 0-.382.197-.757.592-.375.396-.598.593-.668.593-.08 0-.16-.055-.24-.165-.08-.11-.12-.18-.12-.21 0-.1.095-.262.285-.487.19-.226.43-.463.72-.713.26-.23.573-.445.938-.645s.687-.3.967-.3c.45 0 .788.128 1.013.383.225.255.337.562.337.922 0 .15-.015.31-.045.48a1.69 1.69 0 01-.195.525l-1.14 2.505c-.09.21-.155.38-.195.51-.04.13-.06.22-.06.27 0 .06.015.098.045.112a.2.2 0 00.09.023c.22 0 .478-.158.773-.473.295-.314.482-.472.562-.472.07 0 .145.053.225.158.08.105.12.177.12.217z" fill="var(--fill)"></path>
+              </svg>
+            </div>
+            <div class="ml-4 text-secondary py-2">
+              <p>Security log is a Business plan feature</p>
+              <button class="btn-bg-on-hover hover:!bg-[#f5f6f4] my-[4px] h-[24px] -ml-2 hover:!shadow-none">
+                Upgrade to Business
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <!--  header-row-->
+        <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+          <div class="w-1/2">
+            Actions
+          </div>
+          <div class="w-1/4">
+            IP address
+          </div>
+          <div class="w-1/4">
+            Time
+          </div>
+        </div>
+
+        <!--  rows-->
+        <div class="table-rows overflow-y-auto table-rows mb-[52px]">
+
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              johndoe@gmail.com enabled all members-access for #general
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              98.11.121.170
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              May 28, 2021, 9:5...
+            </div>
+          </div>
+
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              alexwu@gmail.com updated the subscription plan
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              95.23.153.180
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              May 27, 2021, 8:43...
+            </div>
+          </div>
+
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+
+          <div class="flex px-[32[x] border-b-[1px] border-lightBorder h-[36px] items-center">
+            <div class="w-1/2 whitespace-nowrap overflow-x-hidden mr-2">
+              janeli@gmail.com archived the attribute Points
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              52.42.143.153
+            </div>
+            <div class="w-1/4 whitespace-nowrap overflow-x-hidden">
+              Apr 21, 2021, 12:01...
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+
+      </div>
+
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>site</title>
 </head>
-<body class="h-screen w-full font-inter">
+<body class="h-screen w-full font-inter relative">
 <div class="main-wrapper flex h-screen w-full text-primary">
 
   <!--  Sidebar-->
@@ -244,7 +244,7 @@
   </div>
 
   <!--  Content part -->
-  <main class="content flex-1  flex flex-col overflow-hidden">
+  <main class="content flex-1 flex flex-col overflow-hidden">
 
     <header>
       <div class="header-wrapper flex py-3 px-8 screen-width-minus-sidebar">
@@ -398,7 +398,8 @@
         <div class="h-[1px] bg-lightBorder ml-8 mr-8"></div>
 
         <!--      table rows-->
-        <div class="overflow-auto h-screen min-w-[1532px] ">
+        <div class="overflow-auto h-full min-w-[1532px] ">
+
 
           <!--        row   -->
           <div class="pr-[18px]">
@@ -683,7 +684,8 @@
                       <!--                      <div class="text ml-[48px]">Double-click on this task to open it</div>-->
 
                       <div class="text ml-[48px]">Press <span
-                          class="rounded-lg py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> again to create a new task
+                          class="rounded-lg py-[2px] px-2 bg-tableCellsBg font-mono">enter</span> again to create a new
+                        task
                       </div>
                       <svg class="w-5 h-5 stroke-commentText ml-3" fill="none" stroke-width="0" viewBox="0 0 16 16"
                            xmlns="http://www.w3.org/2000/svg">
@@ -923,9 +925,9 @@
                         class="edit-input hidden border  focus:outline-none focus:border-2 focus:border-[#8a8a8a] pl-[79px] rounded-lg"
                         type="text">
 
-                    <!--                show static-row when in normal mode-->
+
                     <div class="flex items-center rounded-lg hover:bg-tableCellsHover pl-9 static-row">
-                      <!--                      <div class="text ml-[48px]">Click the checkbox to mark this task as done 🎉</div>-->
+
                       <div class="text ml-[48px]">Find a task with <span
                           class="rounded-lg py-[2px] px-2 bg-tableCellsBg font-mono">cmd+p</span></div>
                       <svg class="w-5 h-5 stroke-commentText ml-3" fill="none" stroke-width="0" viewBox="0 0 16 16"
@@ -1172,7 +1174,7 @@
 
                     <!--                checkbox-->
 
-                    <input class="hidden check-input" type="checkbox" id="check-2" checked>
+                    <input class="hidden check-input" type="checkbox" id="check-2">
 
                     <label
                         class="w-[14px] h-[14px] border border-borderLightGrey rounded-[4px] mr-2 ml-8 absolute left-[32px] top-[11px] label"
@@ -1212,9 +1214,16 @@
 
                     </div>
                     <div class="rounded-lg hover:bg-tableCellsHover pl-2 py-[7px]">
-              <span
-                  class="bg-[#00b8a8] text-white px-[3px] py-[1px] rounded-[4px]  ">
-                Done
+
+                      <!-- done button-->
+                      <!--   <span-->
+                      <!--     class="bg-[#00b8a8] text-white px-[3px] py-[1px] rounded-[4px]  ">-->
+                      <!--     Done+++-->
+                      <!--   </span>-->
+
+                      <span
+                          class="bg-white px-[3px] py-[1px] rounded-[4px] opacity-0 group-hover:opacity-100 border border-lightBorder ">
+                To do
               </span>
                     </div>
                     <div class="rounded-lg hover:bg-tableCellsHover pl-2 py-[7px]">
@@ -1348,7 +1357,6 @@
           </button>
         </div>
       </div>
-
 
 
     </div>

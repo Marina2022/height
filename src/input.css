@@ -78,6 +78,10 @@
   transition: all 1s ease;
 }
 
+.switch-rainbow:disabled + .switch-rainbow-label {
+  opacity: .3;
+}
+
 .switch-black:checked + .switch-black-label .switch-black-span  {
   background: #334655;
   justify-content: flex-end;
@@ -151,10 +155,35 @@
     filter: grayscale(100%);
   }
 
+  .list-item {
+    position: relative;
+  }
+  .list-item:before {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(0,24,42, .65);
+  }
+
+  .table-rows {
+    height: calc(100vh - 90px);
+  }
+
+  .security-overlay {
+    position: absolute;
+    background: linear-gradient(to top, rgba(255,255,255,1) 0% 50%, rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 100%;
+    inset: 0;
+  }
 
 
 }
-
 
 @layer components {
   .reg-btn {
@@ -174,11 +203,11 @@
   }
 
   .btn-with-shadow {
-    @apply text-secondary font-medium border border-[#e1e4e6] items-center px-2 rounded-lg  flex gap-2 cursor-pointer hover:bg-greyBtnHoverBg border-b-[#c8cdd1] h-[28px]
+    @apply text-secondary font-medium border border-[#e1e4e6] items-center px-2 rounded-lg  flex gap-2 cursor-pointer hover:bg-greyBtnHoverBg border-b-[#c8cdd1] h-[28px] hover:shadow
   }
 
 
   .btn-bg-on-hover {
-    @apply text-secondary font-medium items-center px-2 rounded-lg flex gap-2 items-center cursor-pointer hover:bg-btnBgHover h-[28px]
+    @apply text-secondary font-medium items-center px-2 rounded-lg flex gap-2 items-center cursor-pointer hover:bg-btnBgHover h-[28px] hover:shadow
   }
 }

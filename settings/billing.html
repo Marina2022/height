@@ -19,7 +19,7 @@
 
   <!--  Sidebar-->
   <div
-      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen">
+      class="sidebar w-[300px] bg-[#f7f7f8]  pt-7 text-sm text-secondary  shrink-0 px-2 overflow-auto h-screen pb-[25px]">
 
     <a class="p-2 rounded-full flex justify-center items-center hover:bg-greyBtnHoverBg w-7 h-7 ml-5 " href="#">
       <svg class="w-[16px] h-[16px] shrink-0 fill-secondary" stroke="none" viewBox="0 0 16 16"
@@ -35,7 +35,7 @@
         <li class="sidebar-item font-medium text-primary">
           <span class="pl-5">Personal settings</span>
         </li>
-        <li class="item-active">
+        <li class="sidebar-item">
           <a href="profile.html" class="pl-5">Profile</a>
         </li>
 
@@ -90,7 +90,7 @@
         <li class="sidebar-item">
           <a href="authentication.html" class="pl-5">Authentication</a>
         </li>
-        <li class="sidebar-item">
+        <li class="item-active">
           <a href="billing.html" class="pl-5">Billing</a>
         </li>
         <li class="sidebar-item">
@@ -106,14 +106,27 @@
   <!--  Content part -->
   <div class="content flex-1 flex flex-col px-8 overflow-auto h-screen">
 
-    <header>
-      <h1 class="title text-primary font-medium flex items-center pt-7 py-3">
-        Profile settings
+
+    <main class="max-w-[580px]">
+
+
+      <h1 class="title text-primary font-medium flex items-center pt-7 mb-4">
+        Current plan
       </h1>
-    </header>
 
-    <main>
+      <div
+          class="bg-[#f8f8f8] rounded-[10px] px-6 py-4  w-[580px] flex gap-3 items-center mb-4">
+        <div class="text-[16px] font-medium text-primary mr-auto">
+          Free
+        </div>
+        <button class="mr-4 hover:bg-[#eeeeee] px-3 rounded-lg py-[2px]">
+          See plans
+        </button>
 
+        <button class="btn-with-shadow bg-btnBlack text-[#eaeaea] hover:!bg-btnBlack ">
+          Upgrade
+        </button>
+      </div>
     </main>
   </div>
 </div>
